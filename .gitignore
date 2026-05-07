@@ -1,0 +1,11 @@
+﻿venv/
+__pycache__/
+*.pyc
+.env
+data/cache_okx/
+reports/
+dist/
+*.log
+.DS_Store
+_fix.py
+fix_*.py
