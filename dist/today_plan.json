@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-05-07T21:50:04.745327+00:00",
+  "btc": {
+    "price": 93500.00000000007,
+    "rsi": 59.9138870271043,
+    "ma50": 89480.23658981567,
+    "ma200": 101836.1126117452,
+    "regime": "BEAR",
+    "bull_score": 1,
+    "bear_score": 3,
+    "long_score": 2,
+    "short_score": 3,
+    "breakout_20d": true,
+    "breakout_55d": false,
+    "breakdown_20d": false,
+    "breakdown_55d": false,
+    "action": "WAIT (BEAR regime, no entry)",
+    "side": null,
+    "position_pct": 0.0,
+    "capital_usd": 0.0,
+    "units": 0.0,
+    "stop_price": null,
+    "stop_dist_pct": 0,
+    "max_risk_pct_of_account": 0.0,
+    "urgency": "Wait for clearer signals",
+    "reason": "BEAR regime but short_score=3"
+  },
+  "eth": {
+    "price": 3110.0,
+    "rsi": 56.689100324152655,
+    "ma50": 3044.926126553485,
+    "ma200": 3655.007675875785,
+    "regime": "BEAR",
+    "bull_score": 1,
+    "bear_score": 3,
+    "long_score": 2,
+    "short_score": 3,
+    "breakout_20d": true,
+    "breakout_55d": false,
+    "breakdown_20d": false,
+    "breakdown_55d": false,
+    "action": "WAIT (BEAR regime, no entry)",
+    "side": null,
+    "position_pct": 0.0,
+    "capital_usd": 0.0,
+    "units": 0.0,
+    "stop_price": null,
+    "stop_dist_pct": 0,
+    "max_risk_pct_of_account": 0.0,
+    "urgency": "Wait for clearer signals",
+    "reason": "BEAR regime but short_score=3"
+  },
+  "risk": {
+    "severity": 0,
+    "action": "TRADE_NORMAL",
+    "sentiment": -4
+  },
+  "events": [
+    {
+      "date": "2026-05-08",
+      "name": "US NFP",
+      "impact": 7
+    },
+    {
+      "date": "2026-05-13",
+      "name": "US CPI Release",
+      "impact": 9
+    }
+  ]
+}
