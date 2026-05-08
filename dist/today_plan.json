@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026-05-07T22:39:49.788435+00:00",
+  "timestamp": "2026-05-08T07:47:33.283034+00:00",
   "btc": {
-    "price": 79845.6,
-    "rsi": 60.79978276661294,
-    "ma50": 73407.54,
-    "ma200": 83112.0785,
+    "price": 79576.1,
+    "rsi": 59.63214709902631,
+    "ma50": 73402.15,
+    "ma200": 83110.731,
     "regime": "NEUTRAL",
     "bull_score": 2,
     "bear_score": 2,
     "long_score": 2,
-    "short_score": 3,
+    "short_score": 2,
     "breakout_20d": false,
     "breakout_55d": false,
     "breakdown_20d": false,
@@ -26,10 +26,10 @@
     "reason": "Regime is transitioning - dont fight it | Consider funding rate carry (market-neutral)"
   },
   "eth": {
-    "price": 2286.09,
-    "rsi": 49.21259828299217,
-    "ma50": 2222.7924000000003,
-    "ma200": 2680.9636000000005,
+    "price": 2279.62,
+    "rsi": 48.56230189914613,
+    "ma50": 2222.663,
+    "ma200": 2680.93125,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -43,8 +43,8 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 2.6245685865385875,
-    "stop_price": 2514.6990000000005,
+    "units": 2.63201761697125,
+    "stop_price": 2507.582,
     "stop_dist_pct": 0.1,
     "max_risk_pct_of_account": 0.6,
     "urgency": "Wait for clearer signals",
@@ -53,7 +53,7 @@
   "risk": {
     "severity": 1,
     "action": "TRADE_NORMAL",
-    "sentiment": -9
+    "sentiment": -6
   },
   "events": [
     {
