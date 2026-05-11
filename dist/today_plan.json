@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-05-10T15:33:40.989611+00:00",
+  "timestamp": "2026-05-11T18:24:50.663132+00:00",
   "btc": {
-    "price": 80996.5,
-    "rsi": 64.17498398181785,
-    "ma50": 73834.002,
-    "ma200": 82812.00099999999,
+    "price": 81963.4,
+    "rsi": 66.88346808035465,
+    "ma50": 74331.07,
+    "ma200": 82531.37299999999,
     "regime": "NEUTRAL",
     "bull_score": 2,
     "bear_score": 2,
     "long_score": 2,
     "short_score": 3,
-    "breakout_20d": false,
-    "breakout_55d": false,
+    "breakout_20d": true,
+    "breakout_55d": true,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "action": "FLAT or CARRY (NEUTRAL regime)",
@@ -26,10 +26,10 @@
     "reason": "Regime is transitioning - dont fight it | Consider funding rate carry (market-neutral)"
   },
   "eth": {
-    "price": 2337.37,
-    "rsi": 54.64132391920231,
-    "ma50": 2230.2494,
-    "ma200": 2664.6585499999997,
+    "price": 2339.37,
+    "rsi": 54.518846676792414,
+    "ma50": 2239.6788,
+    "ma200": 2649.2426,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -43,8 +43,8 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 2.5669876827374356,
-    "stop_price": 2571.107,
+    "units": 2.564793085317842,
+    "stop_price": 2573.3070000000002,
     "stop_dist_pct": 0.1,
     "max_risk_pct_of_account": 0.6,
     "urgency": "Wait for clearer signals",
@@ -53,7 +53,7 @@
   "risk": {
     "severity": 5,
     "action": "REDUCE_SIZE_50",
-    "sentiment": -17
+    "sentiment": -11
   },
   "events": [
     {
