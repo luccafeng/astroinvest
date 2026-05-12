@@ -49,8 +49,8 @@ def gather_data(use_demo: bool = False) -> dict:
             prices = get_prices(use_real=False)
             data_source = "calibrated demo (fallback)"
 
-    btc_decision = make_decision(prices["BTC"], account_size=100_000)
-    eth_decision = make_decision(prices["ETH"], account_size=100_000)
+btc_decision = make_decision(prices["BTC"], account_size=100_000, asset="BTC")
+eth_decision = make_decision(prices["ETH"], account_size=100_000, asset="ETH")
     risk = assess_market_risk()
     events = upcoming_events(7)
 
