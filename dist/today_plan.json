@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-05-12T01:24:26.467340+00:00",
+  "timestamp": "2026-05-12T18:26:28.256377+00:00",
   "btc": {
-    "price": 81316.5,
-    "rsi": 64.65093507958152,
-    "ma50": 74318.132,
-    "ma200": 82528.1385,
-    "regime": "NEUTRAL",
-    "bull_score": 2,
-    "bear_score": 2,
-    "long_score": 2,
-    "short_score": 2,
+    "price": 80511.5,
+    "rsi": 60.20837967550797,
+    "ma50": 74511.26,
+    "ma200": 82368.809,
+    "regime": "BEAR",
+    "bull_score": 1,
+    "bear_score": 3,
+    "long_score": 1,
+    "short_score": 3,
     "breakout_20d": false,
     "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "BTC",
-    "action": "FLAT or CARRY (NEUTRAL regime)",
+    "action": "WAIT (BEAR regime, no entry)",
     "side": null,
     "position_pct": 0.0,
     "capital_usd": 0.0,
@@ -24,13 +24,13 @@
     "stop_dist_pct": 0,
     "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "Regime is transitioning - dont fight it | Consider funding rate carry (market-neutral)"
+    "reason": "BEAR regime but short_score=3"
   },
   "eth": {
-    "price": 2323.41,
-    "rsi": 52.58412151444262,
-    "ma50": 2239.3596,
-    "ma200": 2649.1627999999996,
+    "price": 2277.93,
+    "rsi": 47.76034824850808,
+    "ma50": 2240.987,
+    "ma200": 2640.57905,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -45,17 +45,17 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 2.582411197334952,
-    "stop_price": 2555.751,
+    "units": 2.6339703151545484,
+    "stop_price": 2505.723,
     "stop_dist_pct": 0.1,
     "max_risk_pct_of_account": 0.6,
     "urgency": "Wait for clearer signals",
     "reason": "Good short confluence; await breakdown"
   },
   "risk": {
-    "severity": 5,
-    "action": "REDUCE_SIZE_50",
-    "sentiment": -12
+    "severity": 10,
+    "action": "EXIT_ALL",
+    "sentiment": -24
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": -4.7,
+    "funding_annualized_pct": -6.0,
     "fng": 49
   }
 }
