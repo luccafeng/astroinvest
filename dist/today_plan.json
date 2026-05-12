@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-05-12T00:29:12.320282+00:00",
+  "timestamp": "2026-05-12T01:16:40.081687+00:00",
   "btc": {
-    "price": 81544.9,
-    "rsi": 65.68627247903521,
-    "ma50": 74322.7,
-    "ma200": 82529.2805,
+    "price": 81375.0,
+    "rsi": 64.9782024261985,
+    "ma50": 74319.302,
+    "ma200": 82528.431,
     "regime": "NEUTRAL",
     "bull_score": 2,
     "bear_score": 2,
@@ -27,10 +27,10 @@
     "reason": "Regime is transitioning - dont fight it | Consider funding rate carry (market-neutral)"
   },
   "eth": {
-    "price": 2334.61,
-    "rsi": 53.9950520864748,
-    "ma50": 2239.5836,
-    "ma200": 2649.2188,
+    "price": 2324.58,
+    "rsi": 52.73022271040253,
+    "ma50": 2239.383,
+    "ma200": 2649.16865,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -45,8 +45,8 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 2.570022402028604,
-    "stop_price": 2568.0710000000004,
+    "units": 2.5811114265802857,
+    "stop_price": 2557.038,
     "stop_dist_pct": 0.1,
     "max_risk_pct_of_account": 0.6,
     "urgency": "Wait for clearer signals",
@@ -63,5 +63,14 @@
       "name": "US CPI Release",
       "impact": 9
     }
-  ]
+  ],
+  "macro_bias": {
+    "total_score": 0.0,
+    "direction": "NEUTRAL",
+    "confidence": "WEAK",
+    "etf_sum_7d_musd": null,
+    "etf_score": 0.0,
+    "funding_annualized_pct": -4.6,
+    "fng": 49
+  }
 }
