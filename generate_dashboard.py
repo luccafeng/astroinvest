@@ -1,18 +1,14 @@
 """
-generate_dashboard.py
+generate_dashboard.py  (v3 — ETF flow integration)
 =====================
-Build a self-contained dashboard.html from real OKX data and master workflow output.
+Build a self-contained dashboard.html with:
+  - BTC / ETH scanner decisions (from unified_scanner v2)
+  - News + macro event risk gating (news_monitor)
+  - NEW: BTC spot ETF flow signal + visual bar chart (external_signals)
+  - Strategy veto: strong ETF inflow vetoes new SHORT signals;
+                   strong outflow vetoes new LONG signals.
 
-Output: ./dist/index.html  (single file, no external dependencies except CDN tabler)
-
-Usage:
-    python generate_dashboard.py                    # uses real OKX data if available
-    python generate_dashboard.py --use-demo         # forces calibrated demo data
-    python generate_dashboard.py --output PATH      # custom output path
-
-This script is designed to be run by:
-  - You manually for testing
-  - GitHub Actions cron daily at 12:00 UTC for production
+Output: ./dist/index.html + ./dist/today_plan.json
 """
 from __future__ import annotations
 import os, sys, json, argparse
@@ -28,14 +24,23 @@ warnings.filterwarnings("ignore")
 
 
 # ======================================================================
-# 1. PULL DECISION FROM YOUR EXISTING MODULES
+# 1. PULL DECISION FROM ALL SOURCES
 # ======================================================================
 
 def gather_data(use_demo: bool = False) -> dict:
-    """Run unified_scanner + news_monitor and return everything needed for dashboard."""
+    """Run unified_scanner + news_monitor + external_signals."""
     from unified_scanner import make_decision, compute_rsi
     from news_monitor import assess_market_risk, upcoming_events
     from data.data_loader import get_prices
+
+    # External signals (ETF + funding + F&G + macro) - new in v3
+    try:
+        from external_signals import assess_macro_bias
+        print("[gather] Fetching external signals (ETF/funding/F&G/macro)...")
+        macro_bias = assess_macro_bias()
+    except Exception as e:
+        print(f"[WARN] external_signals failed: {e}")
+        macro_bias = None
 
     if use_demo:
         prices = get_prices(use_real=False)
@@ -54,11 +59,9 @@ def gather_data(use_demo: bool = False) -> dict:
     risk = assess_market_risk()
     events = upcoming_events(7)
 
-    # Extract last 30 days OHLC if available, else build from close-only
     btc_ohlc = build_ohlc_series(prices["BTC"], days=30)
     eth_ohlc = build_ohlc_series(prices["ETH"], days=30)
 
-    # Detect historical buy/short signals over last 30 days
     btc_signals = detect_historical_signals(prices["BTC"])
     eth_signals = detect_historical_signals(prices["ETH"])
 
@@ -73,38 +76,27 @@ def gather_data(use_demo: bool = False) -> dict:
         "eth_signals": eth_signals,
         "risk": risk,
         "events": events,
+        "macro_bias": macro_bias,
     }
 
 
 def build_ohlc_series(close: pd.Series, days: int = 30) -> list:
-    """
-    Generate OHLC bars from close-only data using rolling proxy.
-    If you later add intraday data, replace with real OHLC.
-    """
     recent = close.tail(days + 1)
     out = []
     for i in range(1, len(recent)):
         prev = recent.iloc[i - 1]
         curr = recent.iloc[i]
-        # Proxy: simulate intraday range from daily volatility
         rng = abs(curr - prev) * 1.4 + curr * 0.005
         high = max(prev, curr) + rng * 0.4
         low = min(prev, curr) - rng * 0.4
-        out.append({
-            "date": recent.index[i].strftime("%Y-%m-%d"),
-            "o": float(prev),
-            "h": float(high),
-            "l": float(low),
-            "c": float(curr),
-        })
+        out.append({"date": recent.index[i].strftime("%Y-%m-%d"),
+                    "o": float(prev), "h": float(high),
+                    "l": float(low), "c": float(curr)})
     return out
 
 
 def detect_historical_signals(close: pd.Series, lookback_days: int = 30) -> list:
-    """Find when buy/short signals would have triggered in the last N days."""
-    from unified_scanner import (
-        detect_regime, long_confluence, short_confluence
-    )
+    from unified_scanner import detect_regime, long_confluence, short_confluence
     regime, _, _ = detect_regime(close)
     long_sc = long_confluence(close)
     short_sc = short_confluence(close)
@@ -113,7 +105,6 @@ def detect_historical_signals(close: pd.Series, lookback_days: int = 30) -> list
 
     signals = []
     recent = close.tail(lookback_days + 1)
-    n = len(recent)
     for i, ts in enumerate(recent.index[1:], start=1):
         idx = -lookback_days - 1 + i
         try:
@@ -123,28 +114,26 @@ def detect_historical_signals(close: pd.Series, lookback_days: int = 30) -> list
             p = close.iloc[idx]
             h20 = high_20.iloc[idx]
             l20 = low_20.iloc[idx]
-
             if r == "BULL" and ls >= 4 and p >= h20 * 0.999:
-                signals.append({"i": i - 1, "type": "buy", "date": ts.strftime("%Y-%m-%d"), "price": float(p)})
+                signals.append({"i": i - 1, "type": "buy",
+                                "date": ts.strftime("%Y-%m-%d"), "price": float(p)})
             elif r == "BEAR" and ss >= 4 and p <= l20 * 1.001:
-                signals.append({"i": i - 1, "type": "short", "date": ts.strftime("%Y-%m-%d"), "price": float(p)})
+                signals.append({"i": i - 1, "type": "short",
+                                "date": ts.strftime("%Y-%m-%d"), "price": float(p)})
         except (IndexError, KeyError):
             continue
     return signals
 
 
 # ======================================================================
-# 2. BUILD CANDLESTICK CHART DATA FOR HTML
+# 2. CHART DATA FOR HTML
 # ======================================================================
 
 def build_chart_data(ohlc: list, lookback: int = 20) -> dict:
-    """Convert OHLC + MAs into the form the JS chart renderer expects."""
     bars = ohlc[-lookback:]
-    closes = [b["c"] for b in bars]
     highs = [b["h"] for b in bars]
     lows = [b["l"] for b in bars]
 
-    # Compute 50/200 MA over the longer series, then take last `lookback`
     full_series = pd.Series([b["c"] for b in ohlc])
     ma50 = full_series.rolling(min(50, len(full_series))).mean().bfill().tolist()[-lookback:]
     ma200 = full_series.rolling(min(200, len(full_series))).mean().bfill().tolist()[-lookback:]
@@ -152,61 +141,42 @@ def build_chart_data(ohlc: list, lookback: int = 20) -> dict:
     p_max = max(max(highs), max(ma50), max(ma200))
     p_min = min(min(lows), min(ma50), min(ma200))
     pad = (p_max - p_min) * 0.05
-    p_max += pad
-    p_min -= pad
+    p_max += pad; p_min -= pad
 
     def y_of(price):
         return 5 + (p_max - price) / (p_max - p_min) * 75
 
     bar_data = []
     for b in bars:
-        bar_data.append({
-            "h": round(y_of(b["h"]), 1),
-            "l": round(y_of(b["l"]), 1),
-            "o": round(y_of(b["o"]), 1),
-            "c": round(y_of(b["c"]), 1),
-            "up": b["c"] >= b["o"],
-        })
-
+        bar_data.append({"h": round(y_of(b["h"]), 1), "l": round(y_of(b["l"]), 1),
+                         "o": round(y_of(b["o"]), 1), "c": round(y_of(b["c"]), 1),
+                         "up": b["c"] >= b["o"]})
     ma50_y = [round(y_of(p), 1) for p in ma50]
     ma200_y = [round(y_of(p), 1) for p in ma200]
-
-    # Price labels at key levels
     levels = [p_max - (p_max - p_min) * f for f in (0.05, 0.27, 0.50, 0.73, 0.95)]
     price_labels = [{"label": fmt_price(p), "y": round(y_of(p), 1)} for p in levels]
-
     dates = [b["date"][5:] for b in bars]
-
-    return {
-        "data": bar_data,
-        "ma50": ma50_y,
-        "ma200": ma200_y,
-        "labels": price_labels,
-        "dates": dates,
-    }
+    return {"data": bar_data, "ma50": ma50_y, "ma200": ma200_y,
+            "labels": price_labels, "dates": dates}
 
 
 def fmt_price(p: float) -> str:
-    if p >= 10000:
-        return f"{p/1000:.0f}k"
-    if p >= 1000:
-        return f"{p/1000:.1f}k"
+    if p >= 10000: return f"{p/1000:.0f}k"
+    if p >= 1000:  return f"{p/1000:.1f}k"
     return f"{p:,.0f}"
 
 
 def filter_signals_for_chart(signals: list, lookback: int = 20) -> list:
-    """Map signal indices into the chart's lookback window."""
     return [{"i": s["i"], "type": s["type"]} for s in signals if s["i"] < lookback]
 
 
 # ======================================================================
-# 3. GATE LOGIC (mirrors master_workflow.py)
+# 3. GATE LOGIC — NEW: ETF flow direction veto
 # ======================================================================
 
-def compute_final_action(btc: dict, eth: dict, risk) -> dict:
+def compute_final_action(btc: dict, eth: dict, risk, macro_bias=None) -> dict:
     final = "TRADE"
     reasons = []
-
     btc_flat = btc["side"] is None
     eth_flat = eth["side"] is None
 
@@ -221,11 +191,27 @@ def compute_final_action(btc: dict, eth: dict, risk) -> dict:
         final = "PAUSE"
         reasons.append(f"Event severity {risk.severity}/10 — no new entries")
 
+    # NEW v3: ETF flow direction veto
+    if macro_bias is not None and not final.startswith("EXIT"):
+        etf = macro_bias.etf if hasattr(macro_bias, "etf") else macro_bias.get("etf", {})
+        etf_score = etf.get("score", 0) or 0
+        etf_sum_7d = etf.get("sum_7d_flow_musd", 0) or 0
+
+        has_short = (btc.get("side") == "SHORT") or (eth.get("side") == "SHORT")
+        has_long = (btc.get("side") == "LONG") or (eth.get("side") == "LONG")
+
+        if etf_score >= 0.5 and has_short:
+            final = "FLAT"
+            reasons.append(f"ETF inflow strong (+${etf_sum_7d:.0f}M/7d) — vetoes SHORT")
+        elif etf_score <= -0.5 and has_long:
+            final = "FLAT"
+            reasons.append(f"ETF outflow strong (${etf_sum_7d:.0f}M/7d) — vetoes LONG")
+
     return {"action": final, "reasons": reasons}
 
 
 # ======================================================================
-# 4. RENDER HTML
+# 4. HTML TEMPLATE
 # ======================================================================
 
 HTML_TEMPLATE = r'''<!DOCTYPE html>
@@ -288,6 +274,8 @@ body{{margin:0;padding:0;background:#FAFAFA;color:#0F0F12;font-family:-apple-sys
 <div class="cols-2">
   {asset_cards}
 </div>
+
+{etf_card}
 
 <div class="cols-3">
   {events_card}
@@ -394,7 +382,6 @@ def render_asset_card(asset: str, decision: dict, chart_id: str) -> str:
     regime = decision["regime"]
     pill_class = {"BULL": "bull", "BEAR": "bear", "NEUTRAL": ""}.get(regime, "")
     side = decision["side"] or "FLAT"
-
     if side == "LONG":
         rec = "Build long position" if decision["position_pct"] >= 0.15 else "Starter long"
     elif side == "SHORT":
@@ -442,10 +429,7 @@ def render_events_card(events: list) -> str:
             ev_dt = datetime.strptime(ev.date, "%Y-%m-%d").replace(
                 hour=18 if "FOMC" in ev.name else 13, tzinfo=timezone.utc)
             delta_h = (ev_dt - now).total_seconds() / 3600
-            if delta_h < 48:
-                t_str = f"{delta_h:.0f}h"
-            else:
-                t_str = f"{delta_h/24:.0f}d"
+            t_str = f"{delta_h:.0f}h" if delta_h < 48 else f"{delta_h/24:.0f}d"
             sep = "border-bottom:0.5px solid #F1F1F3;margin-bottom:8px;padding-bottom:8px" if i < min(len(events)-1, 2) else ""
             advice = "Halve 4h before" if ev.impact >= 8 else "Reduce 24h before" if ev.impact >= 6 else "Watch closely"
             items += f'''
@@ -490,45 +474,175 @@ def render_news_card(risk) -> str:
   </div>'''
 
 
-def render_exec_card(risk) -> str:
+def render_exec_card(risk, macro_bias=None) -> str:
+    """Now also shows funding rate and F&G as compact tiles."""
+    funding_pct = "—"
+    fng_val = "—"
+    if macro_bias is not None:
+        fr = macro_bias.funding if hasattr(macro_bias, "funding") else macro_bias.get("funding", {})
+        fng = macro_bias.fng if hasattr(macro_bias, "fng") else macro_bias.get("fng", {})
+        if "annualized_pct" in fr:
+            funding_pct = f"{fr['annualized_pct']:+.0f}%"
+        if "value" in fng:
+            fng_val = f"{fng['value']} {fng.get('label','')[:4]}"
+
     return f'''
   <div class="av-card">
-    <div class="av-label" style="margin-bottom:8px">Execution metrics</div>
+    <div class="av-label" style="margin-bottom:8px">Risk &amp; sentiment</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
       <div>
-        <div style="font-size:10px;color:#6E6E73">Risk severity</div>
+        <div style="font-size:10px;color:#6E6E73">Severity</div>
         <div class="av-num" style="font-size:15px;font-weight:500;margin-top:1px">{risk.severity}/10</div>
         <div style="font-size:9px;color:#6E6E73">{risk.action.lower().replace("_", " ")}</div>
       </div>
       <div>
-        <div style="font-size:10px;color:#6E6E73">Sentiment</div>
+        <div style="font-size:10px;color:#6E6E73">News sent.</div>
         <div class="av-num" style="font-size:15px;font-weight:500;margin-top:1px">{risk.sentiment_score:+d}</div>
         <div style="font-size:9px;color:#6E6E73">news flow</div>
       </div>
       <div>
-        <div style="font-size:10px;color:#6E6E73">VWAP edge</div>
-        <div class="av-num" style="font-size:15px;font-weight:500;margin-top:1px">+30 bp</div>
-        <div style="font-size:9px;color:#6E6E73">last 24h</div>
+        <div style="font-size:10px;color:#6E6E73">Funding (yr)</div>
+        <div class="av-num" style="font-size:15px;font-weight:500;margin-top:1px">{funding_pct}</div>
+        <div style="font-size:9px;color:#6E6E73">BTC perp</div>
       </div>
       <div>
-        <div style="font-size:10px;color:#6E6E73">Exposure</div>
-        <div class="av-num" style="font-size:15px;font-weight:500;margin-top:1px">0%</div>
-        <div style="font-size:9px;color:#6E6E73">flat</div>
+        <div style="font-size:10px;color:#6E6E73">Fear &amp; Greed</div>
+        <div class="av-num" style="font-size:15px;font-weight:500;margin-top:1px">{fng_val}</div>
+        <div style="font-size:9px;color:#6E6E73">crypto-wide</div>
       </div>
     </div>
   </div>'''
 
 
+# ======================================================================
+# 5. NEW: ETF FLOW CARD WITH BAR CHART
+# ======================================================================
+
+def render_etf_card(macro_bias) -> str:
+    """
+    Renders BTC spot ETF flow card with daily bar chart of last 14 days.
+    Green bars = net inflow, red bars = net outflow.
+    """
+    if macro_bias is None:
+        return '''
+  <div class="av-card" style="margin-bottom:10px">
+    <div class="av-row" style="margin-bottom:6px">
+      <span class="av-label">BTC SPOT ETF FLOWS</span>
+      <span class="av-pill">Unavailable</span>
+    </div>
+    <div style="font-size:11px;color:#6E6E73">External signals module not configured. Run external_signals.py.</div>
+  </div>'''
+
+    etf = macro_bias.etf if hasattr(macro_bias, "etf") else macro_bias.get("etf", {})
+    if "error" in etf or not etf.get("daily_flows"):
+        return f'''
+  <div class="av-card" style="margin-bottom:10px">
+    <div class="av-row" style="margin-bottom:6px">
+      <span class="av-label">BTC SPOT ETF FLOWS</span>
+      <span class="av-pill">Data unavailable</span>
+    </div>
+    <div style="font-size:11px;color:#6E6E73">{etf.get("error", "no data")}</div>
+  </div>'''
+
+    daily = etf["daily_flows"]
+    last_day = etf.get("last_day_flow_musd", 0)
+    sum_7d = etf.get("sum_7d_flow_musd", 0)
+    days_pos_7 = etf.get("days_positive_7d", 0)
+    score = etf.get("score", 0)
+    as_of = etf.get("as_of", "")
+
+    # Build SVG bar chart: viewBox 0-100 x 0-50, zero line at y=25
+    n = len(daily)
+    max_abs = max((abs(f) for _, f in daily), default=1) or 1
+    gap = 0.3
+    bar_w = (100 - gap * (n - 1)) / n if n > 0 else 0
+    bars = ""
+    for i, (d, flow) in enumerate(daily):
+        height = abs(flow) / max_abs * 22  # max 22 units tall (half of 44 usable height)
+        color = "#1B9E77" if flow >= 0 else "#A32D2D"
+        x = i * (bar_w + gap)
+        if flow >= 0:
+            y_top = 25 - height
+        else:
+            y_top = 25
+        bars += f'<rect x="{x:.2f}" y="{y_top:.2f}" width="{bar_w:.2f}" height="{max(height, 0.5):.2f}" fill="{color}" opacity="0.85"/>'
+
+    # Highlight bars and labels
+    last_color = "#1B9E77" if last_day >= 0 else "#A32D2D"
+    sum_color  = "#1B9E77" if sum_7d   >= 0 else "#A32D2D"
+
+    if score >= 0.5:
+        bias_text = "Inflow tailwind"
+        pill_class = "bull"
+    elif score <= -0.5:
+        bias_text = "Outflow headwind"
+        pill_class = "bear"
+    elif score > 0:
+        bias_text = "Mild inflow"
+        pill_class = "bull"
+    elif score < 0:
+        bias_text = "Mild outflow"
+        pill_class = "bear"
+    else:
+        bias_text = "Flat"
+        pill_class = ""
+
+    # Veto status
+    veto = ""
+    if score >= 0.5:
+        veto = "⚠ Vetoes new SHORT signals"
+    elif score <= -0.5:
+        veto = "⚠ Vetoes new LONG signals"
+
+    return f'''
+  <div class="av-card" style="margin-bottom:10px">
+    <div class="av-row" style="margin-bottom:10px">
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+        <span class="av-label">BTC SPOT ETF FLOWS · {n}d</span>
+        <span class="av-pill {pill_class}">{bias_text}</span>
+        <span style="font-size:9px;color:#A8A8AC">as of {as_of}</span>
+      </div>
+      <span style="font-size:10px;color:#6E6E73">score {score:+.2f}</span>
+    </div>
+    <div style="display:grid;grid-template-columns:140px 1fr;gap:18px;align-items:center">
+      <div>
+        <div style="font-size:10px;color:#6E6E73">Last day</div>
+        <div class="av-num" style="font-size:22px;font-weight:500;color:{last_color};line-height:1.1">${last_day:+,.0f}M</div>
+        <div style="font-size:10px;color:#6E6E73;margin-top:8px">7d cumulative</div>
+        <div class="av-num" style="font-size:16px;font-weight:500;color:{sum_color};line-height:1.1">${sum_7d:+,.0f}M</div>
+        <div style="font-size:10px;color:#6E6E73;margin-top:6px">{days_pos_7}/7 days positive</div>
+      </div>
+      <div>
+        <svg viewBox="0 0 100 50" preserveAspectRatio="none" style="width:100%;height:60px;display:block">
+          <line x1="0" y1="25" x2="100" y2="25" stroke="#D1D1D4" stroke-width="0.3" stroke-dasharray="1,1"/>
+          {bars}
+        </svg>
+        <div style="display:flex;justify-content:space-between;font-size:9px;color:#A8A8AC;margin-top:2px;font-variant-numeric:tabular-nums">
+          <span>{daily[0][0] if daily else ""}</span>
+          <span>today</span>
+        </div>
+        {f'<div style="font-size:10px;color:#A32D2D;margin-top:4px;font-weight:500">{veto}</div>' if veto else ""}
+      </div>
+    </div>
+  </div>'''
+
+
+# ======================================================================
+# 6. ASSEMBLE FULL DASHBOARD
+# ======================================================================
+
 def render_dashboard(payload: dict, github_repo: str = "yourname/astroinvest") -> str:
     btc = payload["btc"]
     eth = payload["eth"]
     risk = payload["risk"]
-    final = compute_final_action(btc, eth, risk)
+    macro_bias = payload.get("macro_bias")
+
+    final = compute_final_action(btc, eth, risk, macro_bias=macro_bias)
 
     if final["action"] == "FLAT":
         headline = "FLAT — do not trade"
         subtitle = "strategic + event override"
-        detail = "Both BTC and ETH show no entry signal · funding-rate carry is the only viable position"
+        detail = " · ".join(final["reasons"]) or "No entry signal · funding-rate carry only viable position"
     elif final["action"] == "EXIT_ALL":
         headline = "EXIT ALL — risk override"
         subtitle = f"event severity {risk.severity}/10"
@@ -553,10 +667,7 @@ def render_dashboard(payload: dict, github_repo: str = "yourname/astroinvest") -
         ev_dt = datetime.strptime(next_ev.date, "%Y-%m-%d").replace(
             hour=18 if "FOMC" in next_ev.name else 13, tzinfo=timezone.utc)
         delta_h = (ev_dt - now).total_seconds() / 3600
-        if delta_h < 48:
-            t_str = f"{delta_h:.0f}h"
-        else:
-            t_str = f"{delta_h/24:.0f}d"
+        t_str = f"{delta_h:.0f}h" if delta_h < 48 else f"{delta_h/24:.0f}d"
         event_pill = f'<span class="av-pill warn">{next_ev.name.split()[1] if " " in next_ev.name else next_ev.name} in {t_str}</span>'
     else:
         event_pill = ""
@@ -567,10 +678,8 @@ def render_dashboard(payload: dict, github_repo: str = "yourname/astroinvest") -
     eth_chart["signals"] = filter_signals_for_chart(payload["eth_signals"], lookback=20)
     chart_data = {"btc": btc_chart, "eth": eth_chart}
 
-    asset_cards = (
-        render_asset_card("BTC", btc, "btc-chart") +
-        render_asset_card("ETH", eth, "eth-chart")
-    )
+    asset_cards = (render_asset_card("BTC", btc, "btc-chart")
+                   + render_asset_card("ETH", eth, "eth-chart"))
 
     return HTML_TEMPLATE.format(
         date_str=payload["timestamp"].strftime("%Y-%m-%d %H:%M UTC"),
@@ -582,21 +691,22 @@ def render_dashboard(payload: dict, github_repo: str = "yourname/astroinvest") -
         action_subtitle=subtitle,
         action_detail=detail,
         asset_cards=asset_cards,
+        etf_card=render_etf_card(macro_bias),
         events_card=render_events_card(payload["events"]),
         news_card=render_news_card(risk),
-        exec_card=render_exec_card(risk),
+        exec_card=render_exec_card(risk, macro_bias),
         chart_data_json=json.dumps(chart_data),
         github_repo=github_repo,
     )
 
 
 # ======================================================================
-# 5. MAIN
+# 7. MAIN
 # ======================================================================
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--use-demo", action="store_true", help="Force calibrated demo data")
+    p.add_argument("--use-demo", action="store_true")
     p.add_argument("--output", default="./dist/index.html")
     p.add_argument("--github-repo", default=os.environ.get("GITHUB_REPO", "yourname/astroinvest"))
     args = p.parse_args()
@@ -607,6 +717,12 @@ def main():
     print(f"[generate_dashboard] BTC: {payload['btc']['regime']} · {payload['btc']['action']}")
     print(f"[generate_dashboard] ETH: {payload['eth']['regime']} · {payload['eth']['action']}")
     print(f"[generate_dashboard] Risk: {payload['risk'].severity}/10 · {payload['risk'].action}")
+    mb = payload.get("macro_bias")
+    if mb:
+        print(f"[generate_dashboard] Macro: {mb.bias_direction} ({mb.confidence})  score {mb.total_score:+.2f}")
+        etf = mb.etf
+        if "sum_7d_flow_musd" in etf:
+            print(f"[generate_dashboard] ETF 7d: ${etf['sum_7d_flow_musd']:+,.0f}M  ({etf['days_positive_7d']}/7 positive)")
 
     html = render_dashboard(payload, github_repo=args.github_repo)
 
@@ -615,21 +731,29 @@ def main():
     out_path.write_text(html, encoding="utf-8")
     print(f"[generate_dashboard] Wrote {out_path} ({len(html):,} bytes)")
 
-    # Also write today_plan.json for the JSON button
     plan = {
         "timestamp": payload["timestamp"].isoformat(),
         "btc": {k: (v if not isinstance(v, (pd.Timestamp,)) else str(v))
                 for k, v in payload["btc"].items() if k != "date"},
         "eth": {k: (v if not isinstance(v, (pd.Timestamp,)) else str(v))
                 for k, v in payload["eth"].items() if k != "date"},
-        "risk": {
-            "severity": payload["risk"].severity,
-            "action": payload["risk"].action,
-            "sentiment": payload["risk"].sentiment_score,
-        },
+        "risk": {"severity": payload["risk"].severity,
+                 "action": payload["risk"].action,
+                 "sentiment": payload["risk"].sentiment_score},
         "events": [{"date": e.date, "name": e.name, "impact": e.impact}
                    for e in payload["events"]],
     }
+    if mb is not None:
+        plan["macro_bias"] = {
+            "total_score": mb.total_score,
+            "direction": mb.bias_direction,
+            "confidence": mb.confidence,
+            "etf_sum_7d_musd": mb.etf.get("sum_7d_flow_musd"),
+            "etf_score": mb.etf.get("score"),
+            "funding_annualized_pct": mb.funding.get("annualized_pct"),
+            "fng": mb.fng.get("value"),
+        }
+
     json_path = out_path.parent / "today_plan.json"
     json_path.write_text(json.dumps(plan, indent=2, default=str), encoding="utf-8")
     print(f"[generate_dashboard] Wrote {json_path}")
