@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-05-12T18:26:28.256377+00:00",
+  "timestamp": "2026-05-13T18:30:20.201608+00:00",
   "btc": {
-    "price": 80511.5,
-    "rsi": 60.20837967550797,
-    "ma50": 74511.26,
-    "ma200": 82368.809,
+    "price": 79764.4,
+    "rsi": 56.163546878521416,
+    "ma50": 74656.39,
+    "ma200": 82190.7505,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -27,10 +27,10 @@
     "reason": "BEAR regime but short_score=3"
   },
   "eth": {
-    "price": 2277.93,
-    "rsi": 47.76034824850808,
-    "ma50": 2240.987,
-    "ma200": 2640.57905,
+    "price": 2266.09,
+    "rsi": 46.99605361591894,
+    "ma50": 2242.2332,
+    "ma200": 2631.3291499999996,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -45,17 +45,17 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 2.6339703151545484,
-    "stop_price": 2505.723,
+    "units": 2.647732437811384,
+    "stop_price": 2492.6990000000005,
     "stop_dist_pct": 0.1,
     "max_risk_pct_of_account": 0.6,
     "urgency": "Wait for clearer signals",
     "reason": "Good short confluence; await breakdown"
   },
   "risk": {
-    "severity": 10,
-    "action": "EXIT_ALL",
-    "sentiment": -24
+    "severity": 1,
+    "action": "TRADE_NORMAL",
+    "sentiment": -8
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": -6.0,
-    "fng": 49
+    "funding_annualized_pct": 9.1,
+    "fng": 42
   }
 }
