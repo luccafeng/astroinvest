@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-05-13T18:30:20.201608+00:00",
+  "timestamp": "2026-05-14T18:23:21.538502+00:00",
   "btc": {
-    "price": 79764.4,
-    "rsi": 56.163546878521416,
-    "ma50": 74656.39,
-    "ma200": 82190.7505,
+    "price": 81898.4,
+    "rsi": 62.38545127379495,
+    "ma50": 74943.11,
+    "ma200": 82033.0815,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
     "long_score": 1,
     "short_score": 3,
-    "breakout_20d": false,
-    "breakout_55d": false,
+    "breakout_20d": true,
+    "breakout_55d": true,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "BTC",
@@ -27,10 +27,10 @@
     "reason": "BEAR regime but short_score=3"
   },
   "eth": {
-    "price": 2266.09,
-    "rsi": 46.99605361591894,
-    "ma50": 2242.2332,
-    "ma200": 2631.3291499999996,
+    "price": 2314.78,
+    "rsi": 52.088299657721485,
+    "ma50": 2247.7656,
+    "ma200": 2622.19825,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -45,8 +45,8 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 2.647732437811384,
-    "stop_price": 2492.6990000000005,
+    "units": 2.592038984266323,
+    "stop_price": 2546.2580000000003,
     "stop_dist_pct": 0.1,
     "max_risk_pct_of_account": 0.6,
     "urgency": "Wait for clearer signals",
@@ -55,22 +55,16 @@
   "risk": {
     "severity": 1,
     "action": "TRADE_NORMAL",
-    "sentiment": -8
+    "sentiment": -7
   },
-  "events": [
-    {
-      "date": "2026-05-13",
-      "name": "US CPI Release",
-      "impact": 9
-    }
-  ],
+  "events": [],
   "macro_bias": {
-    "total_score": 0.0,
+    "total_score": 0.5,
     "direction": "NEUTRAL",
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 9.1,
-    "fng": 42
+    "funding_annualized_pct": -6.5,
+    "fng": 34
   }
 }
