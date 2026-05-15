@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-05-15T17:17:01.824618+00:00",
+  "timestamp": "2026-05-15T22:25:59.222113+00:00",
   "btc": {
-    "price": 79280.0,
-    "rsi": 52.90402707958483,
-    "ma50": 75151.89199999999,
-    "ma200": 81842.55699999999,
+    "price": 79075.6,
+    "rsi": 52.2182730396429,
+    "ma50": 75147.80399999999,
+    "ma200": 81841.535,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -27,10 +27,10 @@
     "reason": "BEAR regime but short_score=3"
   },
   "eth": {
-    "price": 2226.13,
-    "rsi": 43.747594245442556,
-    "ma50": 2250.6286,
-    "ma200": 2612.38265,
+    "price": 2220.81,
+    "rsi": 43.20405885404163,
+    "ma50": 2250.5222,
+    "ma200": 2612.3560500000003,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -38,24 +38,24 @@
     "short_score": 4,
     "breakout_20d": false,
     "breakout_55d": false,
-    "breakdown_20d": false,
+    "breakdown_20d": true,
     "breakdown_55d": false,
     "asset": "ETH",
-    "action": "STARTER SHORT",
+    "action": "SHORT",
     "side": "SHORT",
-    "position_pct": 0.06,
-    "capital_usd": 6000.0,
-    "units": 2.6952603846136567,
-    "stop_price": 2448.7430000000004,
+    "position_pct": 0.13,
+    "capital_usd": 13000.0,
+    "units": 5.8537200390848385,
+    "stop_price": 2442.891,
     "stop_dist_pct": 0.1,
-    "max_risk_pct_of_account": 0.6,
-    "urgency": "Wait for clearer signals",
-    "reason": "Good short confluence; await breakdown"
+    "max_risk_pct_of_account": 1.3,
+    "urgency": "Enter today, smaller position than longs",
+    "reason": "20d low breakdown in BEAR regime + confluence \u22654"
   },
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -26
+    "sentiment": -24
   },
   "events": [],
   "macro_bias": {
@@ -64,7 +64,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": -0.7,
+    "funding_annualized_pct": 2.9,
     "fng": 43
   }
 }
