@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-05-19T18:28:01.541380+00:00",
+  "timestamp": "2026-05-20T19:56:29.545793+00:00",
   "btc": {
-    "price": 76795.1,
-    "rsi": 45.10228565107942,
-    "ma50": 75928.6,
-    "ma200": 81177.6525,
+    "price": 77667.6,
+    "rsi": 48.48858609016313,
+    "ma50": 76116.866,
+    "ma200": 81018.7205,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -19,18 +19,18 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 0.0781299848558046,
-    "stop_price": 80394.1318676886,
-    "stop_dist_pct": 0.04686538421967799,
-    "max_risk_pct_of_account": 0.2811923053180679,
+    "units": 0.07725229053041423,
+    "stop_price": 81225.17533139036,
+    "stop_dist_pct": 0.045805140514067234,
+    "max_risk_pct_of_account": 0.2748308430844034,
     "urgency": "Wait for clearer signals",
     "reason": "Good short confluence; await breakdown"
   },
   "eth": {
-    "price": 2112.32,
-    "rsi": 35.52221952518846,
-    "ma50": 2257.0508,
-    "ma200": 2577.33475,
+    "price": 2139.41,
+    "rsi": 38.973689921693115,
+    "ma50": 2257.6268,
+    "ma200": 2568.88805,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -45,17 +45,17 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 2.8404787153461593,
-    "stop_price": 2323.5520000000006,
+    "units": 2.804511524205272,
+    "stop_price": 2353.351,
     "stop_dist_pct": 0.1,
     "max_risk_pct_of_account": 0.6,
     "urgency": "Wait for clearer signals",
     "reason": "Good short confluence; await breakdown"
   },
   "risk": {
-    "severity": 1,
-    "action": "TRADE_NORMAL",
-    "sentiment": -10
+    "severity": 3,
+    "action": "TRADE_NORMAL_WIDER_STOPS",
+    "sentiment": -16
   },
   "events": [],
   "macro_bias": {
@@ -64,7 +64,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 11.0,
-    "fng": 25
+    "funding_annualized_pct": 8.8,
+    "fng": 27
   }
 }
