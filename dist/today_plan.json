@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-05-21T18:29:18.926852+00:00",
+  "timestamp": "2026-05-22T18:22:35.799804+00:00",
   "btc": {
-    "price": 77807.3,
-    "rsi": 49.201463332507295,
-    "ma50": 76327.868,
-    "ma200": 80876.9985,
+    "price": 76889.5,
+    "rsi": 45.69262446775752,
+    "ma50": 76508.818,
+    "ma200": 80740.367,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -19,18 +19,18 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 0.07711358702846648,
-    "stop_price": 81390.53245387449,
-    "stop_dist_pct": 0.04605265127917926,
-    "max_risk_pct_of_account": 0.2763159076750756,
+    "units": 0.07803406186800538,
+    "stop_price": 80359.10220315581,
+    "stop_dist_pct": 0.04512452549640477,
+    "max_risk_pct_of_account": 0.2707471529784286,
     "urgency": "Wait for clearer signals",
     "reason": "Good short confluence; await breakdown"
   },
   "eth": {
-    "price": 2141.46,
-    "rsi": 39.50903253097453,
-    "ma50": 2259.1292000000003,
-    "ma200": 2561.6166,
+    "price": 2121.01,
+    "rsi": 37.405904880369604,
+    "ma50": 2260.0842,
+    "ma200": 2554.57485,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -45,8 +45,8 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 2.8018267910677763,
-    "stop_price": 2355.606,
+    "units": 2.828840976704494,
+    "stop_price": 2333.1110000000003,
     "stop_dist_pct": 0.1,
     "max_risk_pct_of_account": 0.6,
     "urgency": "Wait for clearer signals",
@@ -55,7 +55,7 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -19
+    "sentiment": -20
   },
   "events": [],
   "macro_bias": {
@@ -64,7 +64,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 7.5,
-    "fng": 29
+    "funding_annualized_pct": 9.4,
+    "fng": 28
   }
 }
