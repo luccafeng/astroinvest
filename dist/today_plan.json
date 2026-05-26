@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-05-25T14:52:38.206877+00:00",
+  "timestamp": "2026-05-26T15:24:59.126730+00:00",
   "btc": {
-    "price": 77683.3,
-    "rsi": 50.097302819855194,
-    "ma50": 76869.004,
-    "ma200": 80475.10449999999,
+    "price": 76724.1,
+    "rsi": 46.52583191948448,
+    "ma50": 77003.098,
+    "ma200": 80354.44099999999,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -19,18 +19,18 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 0.07723667763856581,
-    "stop_price": 81510.31133893052,
-    "stop_dist_pct": 0.049264273517352145,
-    "max_risk_pct_of_account": 0.29558564110411284,
+    "units": 0.07820228585281547,
+    "stop_price": 80467.17356415166,
+    "stop_dist_pct": 0.04878615147198412,
+    "max_risk_pct_of_account": 0.2927169088319047,
     "urgency": "Wait for clearer signals",
     "reason": "Good short confluence; await breakdown"
   },
   "eth": {
-    "price": 2127.0,
-    "rsi": 41.64150578692177,
-    "ma50": 2261.1254,
-    "ma200": 2541.8918,
+    "price": 2101.04,
+    "rsi": 39.34310047830518,
+    "ma50": 2259.8502000000003,
+    "ma200": 2535.9084999999995,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -45,17 +45,17 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 2.8208744710860367,
-    "stop_price": 2339.7000000000003,
+    "units": 2.8557285915546586,
+    "stop_price": 2311.1440000000002,
     "stop_dist_pct": 0.1,
     "max_risk_pct_of_account": 0.6,
     "urgency": "Wait for clearer signals",
     "reason": "Good short confluence; await breakdown"
   },
   "risk": {
-    "severity": 3,
-    "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -15
+    "severity": 1,
+    "action": "TRADE_NORMAL",
+    "sentiment": -8
   },
   "events": [],
   "macro_bias": {
@@ -64,7 +64,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 0.7,
-    "fng": 30
+    "funding_annualized_pct": 6.6,
+    "fng": 34
   }
 }
