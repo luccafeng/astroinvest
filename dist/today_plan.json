@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-05-26T15:24:59.126730+00:00",
+  "timestamp": "2026-05-27T15:39:54.323537+00:00",
   "btc": {
-    "price": 76724.1,
-    "rsi": 46.52583191948448,
-    "ma50": 77003.098,
-    "ma200": 80354.44099999999,
+    "price": 75401.8,
+    "rsi": 42.100527440378194,
+    "ma50": 77143.674,
+    "ma200": 80221.8005,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -12,25 +12,25 @@
     "short_score": 4,
     "breakout_20d": false,
     "breakout_55d": false,
-    "breakdown_20d": false,
+    "breakdown_20d": true,
     "breakdown_55d": false,
     "asset": "BTC",
-    "action": "STARTER SHORT",
+    "action": "SHORT",
     "side": "SHORT",
-    "position_pct": 0.06,
-    "capital_usd": 6000.0,
-    "units": 0.07820228585281547,
-    "stop_price": 80467.17356415166,
-    "stop_dist_pct": 0.04878615147198412,
-    "max_risk_pct_of_account": 0.2927169088319047,
-    "urgency": "Wait for clearer signals",
-    "reason": "Good short confluence; await breakdown"
+    "position_pct": 0.13,
+    "capital_usd": 13000.0,
+    "units": 0.17240967722255968,
+    "stop_price": 79049.23027507725,
+    "stop_dist_pct": 0.048373252032143085,
+    "max_risk_pct_of_account": 0.6288522764178601,
+    "urgency": "Enter today, smaller position than longs",
+    "reason": "20d low breakdown in BEAR regime + confluence \u22654"
   },
   "eth": {
-    "price": 2101.04,
-    "rsi": 39.34310047830518,
-    "ma50": 2259.8502000000003,
-    "ma200": 2535.9084999999995,
+    "price": 2075.02,
+    "rsi": 37.20921018071356,
+    "ma50": 2259.4698000000003,
+    "ma200": 2529.32925,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -45,17 +45,17 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 2.8557285915546586,
-    "stop_price": 2311.1440000000002,
+    "units": 2.8915383948106523,
+    "stop_price": 2282.5220000000004,
     "stop_dist_pct": 0.1,
     "max_risk_pct_of_account": 0.6,
     "urgency": "Wait for clearer signals",
     "reason": "Good short confluence; await breakdown"
   },
   "risk": {
-    "severity": 1,
-    "action": "TRADE_NORMAL",
-    "sentiment": -8
+    "severity": 3,
+    "action": "TRADE_NORMAL_WIDER_STOPS",
+    "sentiment": -13
   },
   "events": [],
   "macro_bias": {
@@ -64,7 +64,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 6.6,
-    "fng": 34
+    "funding_annualized_pct": 11.0,
+    "fng": 25
   }
 }
