@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-05-30T13:27:49.597553+00:00",
+  "timestamp": "2026-05-31T13:43:40.490440+00:00",
   "btc": {
-    "price": 73772.7,
-    "rsi": 38.9615994637919,
-    "ma50": 77234.37400000001,
-    "ma200": 79762.49050000001,
+    "price": 73895.0,
+    "rsi": 39.485645797118856,
+    "ma50": 77258.148,
+    "ma200": 79621.839,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -19,18 +19,18 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 0.08133089882842841,
-    "stop_price": 76968.35207961888,
-    "stop_dist_pct": 0.04331754266305678,
-    "max_risk_pct_of_account": 0.25990525597834063,
+    "units": 0.08119629203599703,
+    "stop_price": 77113.74679657424,
+    "stop_dist_pct": 0.04355838414742871,
+    "max_risk_pct_of_account": 0.2613503048845722,
     "urgency": "Wait for clearer signals",
     "reason": "Good short confluence; await breakdown"
   },
   "eth": {
-    "price": 2020.76,
-    "rsi": 35.7500671082239,
-    "ma50": 2247.102,
-    "ma200": 2506.9465,
+    "price": 2022.68,
+    "rsi": 35.866553375089026,
+    "ma50": 2242.6892000000003,
+    "ma200": 2499.94975,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -45,17 +45,17 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 2.969179912508165,
-    "stop_price": 2222.8360000000002,
+    "units": 2.966361461031898,
+    "stop_price": 2224.9480000000003,
     "stop_dist_pct": 0.1,
     "max_risk_pct_of_account": 0.6,
     "urgency": "Wait for clearer signals",
     "reason": "Good short confluence; await breakdown"
   },
   "risk": {
-    "severity": 1,
-    "action": "TRADE_NORMAL",
-    "sentiment": -9
+    "severity": 3,
+    "action": "TRADE_NORMAL_WIDER_STOPS",
+    "sentiment": -24
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 3.1,
-    "fng": 23
+    "funding_annualized_pct": 1.1,
+    "fng": 28
   }
 }
