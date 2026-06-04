@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-06-03T16:47:31.087687+00:00",
+  "timestamp": "2026-06-04T14:59:11.128786+00:00",
   "btc": {
-    "price": 66071.3,
-    "rsi": 23.472735357523987,
-    "ma50": 76826.38399999999,
-    "ma200": 79028.302,
+    "price": 63937.8,
+    "rsi": 20.768160769250073,
+    "ma50": 76783.71399999999,
+    "ma200": 79017.6345,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -19,18 +19,18 @@
     "side": "SHORT",
     "position_pct": 0.2,
     "capital_usd": 20000.0,
-    "units": 0.3027032917469461,
-    "stop_price": 70047.66366869092,
-    "stop_dist_pct": 0.06018291858478518,
-    "max_risk_pct_of_account": 1.2036583716957037,
+    "units": 0.31280400639371386,
+    "stop_price": 67884.68931165514,
+    "stop_dist_pct": 0.06173013947391277,
+    "max_risk_pct_of_account": 1.2346027894782556,
     "urgency": "Enter today, but watch for short squeeze",
     "reason": "55d low breakdown in BEAR regime + confluence \u22654"
   },
   "eth": {
-    "price": 1832.8,
-    "rsi": 24.079657365916162,
-    "ma50": 2211.6606,
-    "ma200": 2473.2804,
+    "price": 1774.25,
+    "rsi": 21.571142969230152,
+    "ma50": 2210.4896,
+    "ma200": 2472.98765,
     "regime": "BEAR",
     "bull_score": 0,
     "bear_score": 4,
@@ -45,23 +45,28 @@
     "side": "SHORT",
     "position_pct": 0.2,
     "capital_usd": 20000.0,
-    "units": 10.912265386294195,
-    "stop_price": 2016.0800000000002,
+    "units": 11.272368606453432,
+    "stop_price": 1951.6750000000002,
     "stop_dist_pct": 0.1,
     "max_risk_pct_of_account": 2.0000000000000004,
     "urgency": "Enter today, but watch for short squeeze",
     "reason": "55d low breakdown in BEAR regime + confluence \u22654"
   },
   "risk": {
-    "severity": 0,
+    "severity": 1,
     "action": "TRADE_NORMAL",
-    "sentiment": -3
+    "sentiment": -9
   },
   "events": [
     {
       "date": "2026-06-05",
       "name": "US NFP",
       "impact": 7
+    },
+    {
+      "date": "2026-06-11",
+      "name": "US CPI Release",
+      "impact": 9
     }
   ],
   "macro_bias": {
@@ -70,7 +75,7 @@
     "confidence": "MODERATE",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 11.0,
-    "fng": 11
+    "funding_annualized_pct": -0.8,
+    "fng": 12
   }
 }
