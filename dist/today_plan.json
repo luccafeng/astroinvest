@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-06-05T14:49:14.038368+00:00",
+  "timestamp": "2026-06-06T13:41:24.651615+00:00",
   "btc": {
-    "price": 60920.0,
-    "rsi": 17.670038195400437,
-    "ma50": 76507.194,
-    "ma200": 78852.2185,
+    "price": 60847.5,
+    "rsi": 19.00872965191111,
+    "ma50": 76158.732,
+    "ma200": 78689.4785,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -12,25 +12,25 @@
     "short_score": 4,
     "breakout_20d": false,
     "breakout_55d": false,
-    "breakdown_20d": true,
-    "breakdown_55d": true,
+    "breakdown_20d": false,
+    "breakdown_55d": false,
     "asset": "BTC",
-    "action": "STRONG SHORT",
+    "action": "STARTER SHORT",
     "side": "SHORT",
-    "position_pct": 0.2,
-    "capital_usd": 20000.0,
-    "units": 0.3282994090610637,
-    "stop_price": 65010.690654898644,
-    "stop_dist_pct": 0.06714856623274211,
-    "max_risk_pct_of_account": 1.3429713246548423,
-    "urgency": "Enter today, but watch for short squeeze",
-    "reason": "55d low breakdown in BEAR regime + confluence \u22654"
+    "position_pct": 0.06,
+    "capital_usd": 6000.0,
+    "units": 0.09860717367188462,
+    "stop_price": 65264.274882220576,
+    "stop_dist_pct": 0.07258761464679038,
+    "max_risk_pct_of_account": 0.43552568788074225,
+    "urgency": "Wait for clearer signals",
+    "reason": "Good short confluence; await breakdown"
   },
   "eth": {
-    "price": 1605.77,
-    "rsi": 16.302290218013837,
-    "ma50": 2195.8774000000003,
-    "ma200": 2465.42595,
+    "price": 1560.92,
+    "rsi": 15.272813020489195,
+    "ma50": 2177.8008,
+    "ma200": 2457.5825,
     "regime": "BEAR",
     "bull_score": 0,
     "bear_score": 4,
@@ -45,8 +45,8 @@
     "side": "SHORT",
     "position_pct": 0.2,
     "capital_usd": 20000.0,
-    "units": 12.455083853852047,
-    "stop_price": 1766.3470000000002,
+    "units": 12.812956461573943,
+    "stop_price": 1717.0120000000002,
     "stop_dist_pct": 0.1,
     "max_risk_pct_of_account": 2.0000000000000004,
     "urgency": "Enter today, but watch for short squeeze",
@@ -55,14 +55,9 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -25
+    "sentiment": -21
   },
   "events": [
-    {
-      "date": "2026-06-05",
-      "name": "US NFP",
-      "impact": 7
-    },
     {
       "date": "2026-06-11",
       "name": "US CPI Release",
@@ -75,7 +70,7 @@
     "confidence": "MODERATE",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": -4.1,
+    "funding_annualized_pct": -2.7,
     "fng": 12
   }
 }
