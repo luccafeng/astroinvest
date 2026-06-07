@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-06-06T13:41:24.651615+00:00",
+  "timestamp": "2026-06-07T13:50:56.676395+00:00",
   "btc": {
-    "price": 60847.5,
-    "rsi": 19.00872965191111,
-    "ma50": 76158.732,
-    "ma200": 78689.4785,
+    "price": 61781.2,
+    "rsi": 22.974257185874833,
+    "ma50": 75869.518,
+    "ma200": 78548.2775,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -19,18 +19,18 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 0.09860717367188462,
-    "stop_price": 65264.274882220576,
-    "stop_dist_pct": 0.07258761464679038,
-    "max_risk_pct_of_account": 0.43552568788074225,
+    "units": 0.09711692229998771,
+    "stop_price": 66338.17888539896,
+    "stop_dist_pct": 0.07375996072266255,
+    "max_risk_pct_of_account": 0.4425597643359753,
     "urgency": "Wait for clearer signals",
     "reason": "Good short confluence; await breakdown"
   },
   "eth": {
-    "price": 1560.92,
-    "rsi": 15.272813020489195,
-    "ma50": 2177.8008,
-    "ma200": 2457.5825,
+    "price": 1617.67,
+    "rsi": 22.250988598506936,
+    "ma50": 2162.8725999999997,
+    "ma200": 2450.80225,
     "regime": "BEAR",
     "bull_score": 0,
     "bear_score": 4,
@@ -38,24 +38,24 @@
     "short_score": 4,
     "breakout_20d": false,
     "breakout_55d": false,
-    "breakdown_20d": true,
-    "breakdown_55d": true,
+    "breakdown_20d": false,
+    "breakdown_55d": false,
     "asset": "ETH",
-    "action": "STRONG SHORT",
+    "action": "STARTER SHORT",
     "side": "SHORT",
-    "position_pct": 0.2,
-    "capital_usd": 20000.0,
-    "units": 12.812956461573943,
-    "stop_price": 1717.0120000000002,
+    "position_pct": 0.06,
+    "capital_usd": 6000.0,
+    "units": 3.709038308183993,
+    "stop_price": 1779.4370000000001,
     "stop_dist_pct": 0.1,
-    "max_risk_pct_of_account": 2.0000000000000004,
-    "urgency": "Enter today, but watch for short squeeze",
-    "reason": "55d low breakdown in BEAR regime + confluence \u22654"
+    "max_risk_pct_of_account": 0.6,
+    "urgency": "Wait for clearer signals",
+    "reason": "Good short confluence; await breakdown"
   },
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -21
+    "sentiment": -16
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "MODERATE",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": -2.7,
+    "funding_annualized_pct": 0.7,
     "fng": 12
   }
 }
