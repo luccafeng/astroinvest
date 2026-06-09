@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-06-08T15:50:52.234379+00:00",
+  "timestamp": "2026-06-09T14:49:19.541876+00:00",
   "btc": {
-    "price": 63812.0,
-    "rsi": 30.78178196783618,
-    "ma50": 75635.09599999999,
-    "ma200": 78419.615,
+    "price": 61215.1,
+    "rsi": 26.901324186699128,
+    "ma50": 75344.436,
+    "ma200": 78310.813,
     "regime": "BEAR",
     "bull_score": 0,
     "bear_score": 4,
-    "long_score": 0,
+    "long_score": 1,
     "short_score": 4,
     "breakout_20d": false,
     "breakout_55d": false,
@@ -19,22 +19,22 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 0.09402620196828183,
-    "stop_price": 68848.57155074672,
-    "stop_dist_pct": 0.07892828230970236,
-    "max_risk_pct_of_account": 0.4735696938582142,
+    "units": 0.0980150322387777,
+    "stop_price": 66212.08036569682,
+    "stop_dist_pct": 0.0816298652733855,
+    "max_risk_pct_of_account": 0.48977919164031297,
     "urgency": "Wait for clearer signals",
     "reason": "Good short confluence; await breakdown"
   },
   "eth": {
-    "price": 1692.9,
-    "rsi": 30.30271990809476,
-    "ma50": 2150.3682,
-    "ma200": 2444.5492,
+    "price": 1635.8,
+    "rsi": 27.842195919846176,
+    "ma50": 2136.7814000000003,
+    "ma200": 2439.1959,
     "regime": "BEAR",
     "bull_score": 0,
     "bear_score": 4,
-    "long_score": 0,
+    "long_score": 1,
     "short_score": 4,
     "breakout_20d": false,
     "breakout_55d": false,
@@ -45,8 +45,8 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 3.54421407052986,
-    "stop_price": 1862.1900000000003,
+    "units": 3.667930064800098,
+    "stop_price": 1799.38,
     "stop_dist_pct": 0.1,
     "max_risk_pct_of_account": 0.6,
     "urgency": "Wait for clearer signals",
@@ -55,7 +55,7 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -20
+    "sentiment": -11
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "MODERATE",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": -8.5,
-    "fng": 8
+    "funding_annualized_pct": 2.9,
+    "fng": 10
   }
 }
