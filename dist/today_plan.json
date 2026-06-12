@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-06-11T15:59:15.012972+00:00",
+  "timestamp": "2026-06-12T14:57:05.043874+00:00",
   "btc": {
-    "price": 62719.2,
-    "rsi": 32.32551394775332,
-    "ma50": 74747.682,
-    "ma200": 78080.33899999999,
+    "price": 63982.8,
+    "rsi": 36.71252222544586,
+    "ma50": 74460.506,
+    "ma200": 77967.3515,
     "regime": "BEAR",
     "bull_score": 0,
     "bear_score": 4,
@@ -19,22 +19,22 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 0.09566448551639689,
-    "stop_price": 68184.7279287136,
-    "stop_dist_pct": 0.08714281956264754,
-    "max_risk_pct_of_account": 0.5228569173758851,
+    "units": 0.09377520208556049,
+    "stop_price": 69660.07943191232,
+    "stop_dist_pct": 0.08873133767062885,
+    "max_risk_pct_of_account": 0.5323880260237731,
     "urgency": "Wait for clearer signals",
     "reason": "Good short confluence; await breakdown"
   },
   "eth": {
-    "price": 1644.85,
-    "rsi": 29.53043512135602,
-    "ma50": 2108.5618,
-    "ma200": 2427.83495,
+    "price": 1684.67,
+    "rsi": 33.82127688729531,
+    "ma50": 2095.603,
+    "ma200": 2422.02945,
     "regime": "BEAR",
     "bull_score": 0,
     "bear_score": 4,
-    "long_score": 1,
+    "long_score": 0,
     "short_score": 4,
     "breakout_20d": false,
     "breakout_55d": false,
@@ -45,8 +45,8 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 3.6477490348664015,
-    "stop_price": 1809.335,
+    "units": 3.5615283705414114,
+    "stop_price": 1853.1370000000002,
     "stop_dist_pct": 0.1,
     "max_risk_pct_of_account": 0.6,
     "urgency": "Wait for clearer signals",
@@ -55,14 +55,9 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -17
+    "sentiment": -21
   },
   "events": [
-    {
-      "date": "2026-06-11",
-      "name": "US CPI Release",
-      "impact": 9
-    },
     {
       "date": "2026-06-17",
       "name": "FOMC Rate Decision",
@@ -75,7 +70,7 @@
     "confidence": "MODERATE",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": -2.7,
+    "funding_annualized_pct": -3.5,
     "fng": 12
   }
 }
