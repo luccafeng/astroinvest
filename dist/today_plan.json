@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-06-15T17:13:39.785550+00:00",
+  "timestamp": "2026-06-16T16:50:29.364045+00:00",
   "btc": {
-    "price": 66891.4,
-    "rsi": 46.81963125472868,
-    "ma50": 73498.83,
-    "ma200": 77491.6425,
+    "price": 65734.6,
+    "rsi": 44.02948289704405,
+    "ma50": 73271.81800000001,
+    "ma200": 77359.8855,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -27,10 +27,10 @@
     "reason": "BEAR regime but short_score=3"
   },
   "eth": {
-    "price": 1832.46,
-    "rsi": 48.802505812574566,
-    "ma50": 2050.4732,
-    "ma200": 2397.48195,
+    "price": 1777.18,
+    "rsi": 45.10597318174861,
+    "ma50": 2039.4182,
+    "ma200": 2391.0802000000003,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -53,9 +53,9 @@
     "reason": "BEAR regime but short_score=3"
   },
   "risk": {
-    "severity": 5,
-    "action": "REDUCE_SIZE_50",
-    "sentiment": -12
+    "severity": 2,
+    "action": "TRADE_NORMAL_WIDER_STOPS",
+    "sentiment": 3
   },
   "events": [
     {
@@ -65,12 +65,12 @@
     }
   ],
   "macro_bias": {
-    "total_score": 1.0,
+    "total_score": 0.5,
     "direction": "NEUTRAL",
-    "confidence": "MODERATE",
+    "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": -9.0,
-    "fng": 20
+    "funding_annualized_pct": -0.9,
+    "fng": 23
   }
 }
