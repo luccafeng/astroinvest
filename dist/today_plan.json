@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-06-17T15:27:35.950462+00:00",
+  "timestamp": "2026-06-18T15:22:08.978353+00:00",
   "btc": {
-    "price": 65333.5,
-    "rsi": 43.07962152432612,
-    "ma50": 73263.796,
-    "ma200": 77357.88,
+    "price": 63440.0,
+    "rsi": 38.76125651940751,
+    "ma50": 73022.52799999999,
+    "ma200": 77219.9745,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -27,10 +27,10 @@
     "reason": "BEAR regime but short_score=3"
   },
   "eth": {
-    "price": 1762.05,
-    "rsi": 44.12796450884287,
-    "ma50": 2039.1156,
-    "ma200": 2391.00455,
+    "price": 1728.78,
+    "rsi": 41.9235040075755,
+    "ma50": 2028.4579999999999,
+    "ma200": 2384.5605,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -53,24 +53,18 @@
     "reason": "BEAR regime but short_score=3"
   },
   "risk": {
-    "severity": 10,
-    "action": "EXIT_ALL",
-    "sentiment": -7
+    "severity": 3,
+    "action": "TRADE_NORMAL_WIDER_STOPS",
+    "sentiment": -15
   },
-  "events": [
-    {
-      "date": "2026-06-17",
-      "name": "FOMC Rate Decision",
-      "impact": 10
-    }
-  ],
+  "events": [],
   "macro_bias": {
-    "total_score": 0.5,
+    "total_score": 1.0,
     "direction": "NEUTRAL",
-    "confidence": "WEAK",
+    "confidence": "MODERATE",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": -4.6,
-    "fng": 22
+    "funding_annualized_pct": 4.5,
+    "fng": 15
   }
 }

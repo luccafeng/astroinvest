@@ -37,7 +37,7 @@ body{margin:0;padding:0;background:#FAFAFA;color:#0F0F12;font-family:-apple-syst
     <div style="width:6px;height:6px;background:#1D9E75;border-radius:50%"></div>
     <span style="font-size:15px;font-weight:500;letter-spacing:-0.2px">astroinvest.ai</span>
     <span style="font-size:11px;color:#6E6E73">·</span>
-    <span style="font-size:11px;color:#6E6E73">2026-06-17 15:27 UTC</span>
+    <span style="font-size:11px;color:#6E6E73">2026-06-18 15:22 UTC</span>
   </div>
   <span style="font-size:10px;color:#6E6E73">OKX live · auto-refreshed daily</span>
 </div>
@@ -46,13 +46,13 @@ body{margin:0;padding:0;background:#FAFAFA;color:#0F0F12;font-family:-apple-syst
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;flex-wrap:wrap">
     <span class="av-label">Today's action</span>
     <span class="av-pill">BTC BEAR · ETH BEAR</span>
-    <span class="av-pill warn">Rate in 3h</span>
+    
   </div>
   <div class="av-row" style="align-items:flex-end;flex-wrap:wrap;gap:8px">
-    <h2 style="margin:0;font-size:24px;font-weight:500;letter-spacing:-0.4px">EXIT ALL — risk override</h2>
-    <span style="font-size:11px;color:#6E6E73">event severity 10/10</span>
+    <h2 style="margin:0;font-size:24px;font-weight:500;letter-spacing:-0.4px">FLAT — do not trade</h2>
+    <span style="font-size:11px;color:#6E6E73">strategic + event override</span>
   </div>
-  <p style="margin:6px 0 0;font-size:12px;color:#6E6E73;line-height:1.5">Close all positions before market reaction</p>
+  <p style="margin:6px 0 0;font-size:12px;color:#6E6E73;line-height:1.5">Both BTC and ETH have no entry signal</p>
 </div>
 
 <div class="cols-2">
@@ -63,13 +63,13 @@ body{margin:0;padding:0;background:#FAFAFA;color:#0F0F12;font-family:-apple-syst
         <span style="font-weight:500;font-size:14px">BTC</span>
         <span class="av-pill bear">BEAR</span>
       </div>
-      <span class="av-num" style="font-size:16px;font-weight:500">$65,334</span>
+      <span class="av-num" style="font-size:16px;font-weight:500">$63,440</span>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px">
       <div><div class="av-label">Long</div><div class="av-num" style="font-size:14px;font-weight:500;margin-top:2px">1/5</div></div>
       <div><div class="av-label">Short</div><div class="av-num" style="font-size:14px;font-weight:500;margin-top:2px">3/5</div></div>
-      <div><div class="av-label">RSI</div><div class="av-num" style="font-size:14px;font-weight:500;margin-top:2px">43.1</div></div>
-      <div><div class="av-label">200MA</div><div class="av-num" style="font-size:14px;font-weight:500;margin-top:2px;color:#A32D2D">-15.5%</div></div>
+      <div><div class="av-label">RSI</div><div class="av-num" style="font-size:14px;font-weight:500;margin-top:2px">38.8</div></div>
+      <div><div class="av-label">200MA</div><div class="av-num" style="font-size:14px;font-weight:500;margin-top:2px;color:#A32D2D">-17.8%</div></div>
     </div>
     <div class="tv-chart" id="btc-chart">
       <div class="tv-legend">
@@ -87,13 +87,13 @@ body{margin:0;padding:0;background:#FAFAFA;color:#0F0F12;font-family:-apple-syst
         <span style="font-weight:500;font-size:14px">ETH</span>
         <span class="av-pill bear">BEAR</span>
       </div>
-      <span class="av-num" style="font-size:16px;font-weight:500">$1,762</span>
+      <span class="av-num" style="font-size:16px;font-weight:500">$1,729</span>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px">
       <div><div class="av-label">Long</div><div class="av-num" style="font-size:14px;font-weight:500;margin-top:2px">1/5</div></div>
       <div><div class="av-label">Short</div><div class="av-num" style="font-size:14px;font-weight:500;margin-top:2px">3/5</div></div>
-      <div><div class="av-label">RSI</div><div class="av-num" style="font-size:14px;font-weight:500;margin-top:2px">44.1</div></div>
-      <div><div class="av-label">200MA</div><div class="av-num" style="font-size:14px;font-weight:500;margin-top:2px;color:#A32D2D">-26.3%</div></div>
+      <div><div class="av-label">RSI</div><div class="av-num" style="font-size:14px;font-weight:500;margin-top:2px">41.9</div></div>
+      <div><div class="av-label">200MA</div><div class="av-num" style="font-size:14px;font-weight:500;margin-top:2px;color:#A32D2D">-27.5%</div></div>
     </div>
     <div class="tv-chart" id="eth-chart">
       <div class="tv-legend">
@@ -120,37 +120,27 @@ body{margin:0;padding:0;background:#FAFAFA;color:#0F0F12;font-family:-apple-syst
   
   <div class="av-card">
     <div class="av-label" style="margin-bottom:8px">Upcoming events</div>
-    
-    <div style="display:flex;gap:8px;align-items:flex-start;">
-      <div style="width:36px;text-align:center;flex-shrink:0">
-        <div class="av-num" style="font-size:14px;font-weight:500;color:#7A4F00">3h</div>
-        <div style="font-size:9px;color:#6E6E73">until</div>
-      </div>
-      <div style="flex:1">
-        <div style="font-size:12px;font-weight:500">FOMC Rate Decision <span style="color:#6E6E73;font-weight:400;font-size:11px">· 10/10</span></div>
-        <div style="font-size:10px;color:#6E6E73">Halve 4h before</div>
-      </div>
-    </div>
+    <div style="font-size:11px;color:#6E6E73">No major events in next 7 days</div>
   </div>
   
   <div class="av-card">
     <div class="av-row" style="margin-bottom:8px">
       <span class="av-label">News pulse</span>
-      <span style="font-size:10px;color:#6E6E73">-7 · bearish</span>
+      <span style="font-size:10px;color:#6E6E73">-15 · bearish</span>
     </div>
     <div style="display:flex;flex-direction:column;gap:5px">
       
       <div style="font-size:11px;line-height:1.4;display:flex;gap:6px">
         <span style="color:#3B6D11;font-weight:500;font-size:10px;flex-shrink:0;font-variant-numeric:tabular-nums">+1</span>
-        <span>BitGo stock surges on $50 million share buyback as value lan</span>
+        <span>Bitcoin's nemesis, the Dollar Index, is on the verge of a ma</span>
       </div>
       <div style="font-size:11px;line-height:1.4;display:flex;gap:6px">
         <span style="color:#3B6D11;font-weight:500;font-size:10px;flex-shrink:0;font-variant-numeric:tabular-nums">+1</span>
-        <span>&#39;Rapidly Evolving&#39;: Benchmark Analyst Bullish on Coi</span>
+        <span>Aster popped over 10% on radical 'buyback and burn' upgrade.</span>
       </div>
       <div style="font-size:11px;line-height:1.4;display:flex;gap:6px">
         <span style="color:#A32D2D;font-weight:500;font-size:10px;flex-shrink:0;font-variant-numeric:tabular-nums">-1</span>
-        <span>&#8216;He had his day in court:&#8217; Sens. Lummis and Gall</span>
+        <span>The DAO hack at 10: From $50 million exploit to a $130 milli</span>
       </div>
     </div>
   </div>
@@ -160,22 +150,22 @@ body{margin:0;padding:0;background:#FAFAFA;color:#0F0F12;font-family:-apple-syst
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
       <div>
         <div style="font-size:10px;color:#6E6E73">Severity</div>
-        <div class="av-num" style="font-size:15px;font-weight:500;margin-top:1px">10/10</div>
-        <div style="font-size:9px;color:#6E6E73">exit all</div>
+        <div class="av-num" style="font-size:15px;font-weight:500;margin-top:1px">3/10</div>
+        <div style="font-size:9px;color:#6E6E73">trade normal wider stops</div>
       </div>
       <div>
         <div style="font-size:10px;color:#6E6E73">News sent.</div>
-        <div class="av-num" style="font-size:15px;font-weight:500;margin-top:1px">-7</div>
+        <div class="av-num" style="font-size:15px;font-weight:500;margin-top:1px">-15</div>
         <div style="font-size:9px;color:#6E6E73">news flow</div>
       </div>
       <div>
         <div style="font-size:10px;color:#6E6E73">Funding (yr)</div>
-        <div class="av-num" style="font-size:15px;font-weight:500;margin-top:1px">-5%</div>
+        <div class="av-num" style="font-size:15px;font-weight:500;margin-top:1px">+4%</div>
         <div style="font-size:9px;color:#6E6E73">BTC perp</div>
       </div>
       <div>
         <div style="font-size:10px;color:#6E6E73">Fear &amp; Greed</div>
-        <div class="av-num" style="font-size:15px;font-weight:500;margin-top:1px">22 Extr</div>
+        <div class="av-num" style="font-size:15px;font-weight:500;margin-top:1px">15 Extr</div>
         <div style="font-size:9px;color:#6E6E73">crypto-wide</div>
       </div>
     </div>
@@ -189,12 +179,12 @@ body{margin:0;padding:0;background:#FAFAFA;color:#0F0F12;font-family:-apple-syst
   <button class="av-btn" onclick="location.reload()">Refresh ↺</button>
 </div>
 
-<p style="font-size:9px;color:#A8A8AC;text-align:center;margin:0;letter-spacing:0.3px">quant_crypto · OKX live · auto-deploys via GitHub Actions × Cloudflare Pages · generated 15:27 UTC</p>
+<p style="font-size:9px;color:#A8A8AC;text-align:center;margin:0;letter-spacing:0.3px">quant_crypto · OKX live · auto-deploys via GitHub Actions × Cloudflare Pages · generated 15:22 UTC</p>
 
 </div>
 
 <script>
-const CHARTS = {"btc": {"data": [{"h": 11.5, "l": 20.2, "o": 17.6, "c": 14.1, "up": true}, {"h": 12.7, "l": 15.0, "o": 14.1, "c": 13.6, "up": true}, {"h": 12.4, "l": 15.9, "o": 13.6, "c": 14.7, "up": false}, {"h": 8.4, "l": 31.2, "o": 14.7, "c": 24.9, "up": false}, {"h": 15.7, "l": 49.6, "o": 24.9, "c": 40.4, "up": false}, {"h": 37.1, "l": 48.7, "o": 40.4, "c": 45.4, "up": false}, {"h": 39.9, "l": 59.7, "o": 45.4, "c": 54.2, "up": false}, {"h": 45.9, "l": 76.6, "o": 54.2, "c": 68.2, "up": false}, {"h": 65.6, "l": 69.5, "o": 68.2, "c": 66.8, "up": true}, {"h": 58.0, "l": 70.3, "o": 66.8, "c": 61.5, "up": true}, {"h": 50.4, "l": 65.8, "o": 61.5, "c": 54.7, "up": true}, {"h": 48.2, "l": 71.9, "o": 54.7, "c": 65.4, "up": false}, {"h": 55.4, "l": 69.3, "o": 65.4, "c": 59.3, "up": true}, {"h": 58.1, "l": 60.1, "o": 59.3, "c": 58.8, "up": true}, {"h": 53.0, "l": 61.3, "o": 58.8, "c": 55.4, "up": true}, {"h": 50.4, "l": 57.6, "o": 55.4, "c": 52.6, "up": true}, {"h": 51.4, "l": 54.8, "o": 52.6, "c": 53.7, "up": false}, {"h": 32.5, "l": 61.7, "o": 53.7, "c": 40.5, "up": true}, {"h": 36.7, "l": 50.0, "o": 40.5, "c": 46.2, "up": false}, {"h": 44.5, "l": 50.1, "o": 46.2, "c": 48.4, "up": false}], "ma50": [32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7], "ma200": [32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7], "labels": [{"label": "75k", "y": 8.7}, {"label": "71k", "y": 25.3}, {"label": "67k", "y": 42.5}, {"label": "63k", "y": 59.8}, {"label": "58k", "y": 76.3}], "dates": ["05-28", "05-29", "05-30", "05-31", "06-01", "06-02", "06-03", "06-04", "06-05", "06-06", "06-07", "06-08", "06-09", "06-10", "06-11", "06-12", "06-13", "06-14", "06-15", "06-16"], "signals": [{"i": 4, "type": "short"}, {"i": 8, "type": "short"}, {"i": 9, "type": "short"}, {"i": 13, "type": "short"}, {"i": 14, "type": "short"}, {"i": 15, "type": "short"}, {"i": 16, "type": "short"}, {"i": 17, "type": "short"}]}, "eth": {"data": [{"h": 8.4, "l": 19.4, "o": 16.3, "c": 11.5, "up": true}, {"h": 10.8, "l": 12.9, "o": 11.5, "c": 12.1, "up": false}, {"h": 10.6, "l": 15.5, "o": 12.1, "c": 14.0, "up": false}, {"h": 10.8, "l": 22.1, "o": 14.0, "c": 18.9, "up": false}, {"h": 15.0, "l": 29.0, "o": 18.9, "c": 25.1, "up": false}, {"h": 19.6, "l": 39.6, "o": 25.1, "c": 34.1, "up": false}, {"h": 29.8, "l": 45.4, "o": 34.1, "c": 41.1, "up": false}, {"h": 28.1, "l": 76.6, "o": 41.1, "c": 63.6, "up": false}, {"h": 61.8, "l": 68.0, "o": 63.6, "c": 66.2, "up": false}, {"h": 53.3, "l": 71.1, "o": 66.2, "c": 58.2, "up": true}, {"h": 46.6, "l": 62.6, "o": 58.2, "c": 51.0, "up": true}, {"h": 47.0, "l": 61.4, "o": 51.0, "c": 57.4, "up": false}, {"h": 53.1, "l": 59.2, "o": 57.4, "c": 54.9, "up": true}, {"h": 53.7, "l": 57.5, "o": 54.9, "c": 56.3, "up": false}, {"h": 53.3, "l": 57.7, "o": 56.3, "c": 54.7, "up": true}, {"h": 50.3, "l": 56.5, "o": 54.7, "c": 52.1, "up": true}, {"h": 50.5, "l": 56.0, "o": 52.1, "c": 54.3, "up": false}, {"h": 20.8, "l": 66.6, "o": 54.3, "c": 33.1, "up": true}, {"h": 28.6, "l": 45.0, "o": 33.1, "c": 40.5, "up": false}, {"h": 38.7, "l": 44.6, "o": 40.5, "c": 42.8, "up": false}], "ma50": [29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5], "ma200": [29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5], "labels": [{"label": "2.1k", "y": 8.8}, {"label": "1.9k", "y": 25.2}, {"label": "1.8k", "y": 42.5}, {"label": "1.6k", "y": 59.7}, {"label": "1.5k", "y": 76.3}], "dates": ["05-28", "05-29", "05-30", "05-31", "06-01", "06-02", "06-03", "06-04", "06-05", "06-06", "06-07", "06-08", "06-09", "06-10", "06-11", "06-12", "06-13", "06-14", "06-15", "06-16"], "signals": [{"i": 4, "type": "short"}, {"i": 9, "type": "short"}, {"i": 13, "type": "short"}, {"i": 14, "type": "short"}, {"i": 15, "type": "short"}, {"i": 16, "type": "short"}, {"i": 17, "type": "short"}, {"i": 18, "type": "short"}]}};
+const CHARTS = {"btc": {"data": [{"h": 12.7, "l": 15.0, "o": 14.1, "c": 13.6, "up": true}, {"h": 12.4, "l": 15.9, "o": 13.6, "c": 14.7, "up": false}, {"h": 8.4, "l": 31.2, "o": 14.7, "c": 24.9, "up": false}, {"h": 15.7, "l": 49.6, "o": 24.9, "c": 40.4, "up": false}, {"h": 37.1, "l": 48.7, "o": 40.4, "c": 45.4, "up": false}, {"h": 39.9, "l": 59.7, "o": 45.4, "c": 54.2, "up": false}, {"h": 45.9, "l": 76.6, "o": 54.2, "c": 68.2, "up": false}, {"h": 65.6, "l": 69.5, "o": 68.2, "c": 66.8, "up": true}, {"h": 58.0, "l": 70.3, "o": 66.8, "c": 61.5, "up": true}, {"h": 50.4, "l": 65.8, "o": 61.5, "c": 54.7, "up": true}, {"h": 48.2, "l": 71.9, "o": 54.7, "c": 65.4, "up": false}, {"h": 55.4, "l": 69.3, "o": 65.4, "c": 59.3, "up": true}, {"h": 58.1, "l": 60.1, "o": 59.3, "c": 58.8, "up": true}, {"h": 53.0, "l": 61.3, "o": 58.8, "c": 55.4, "up": true}, {"h": 50.4, "l": 57.6, "o": 55.4, "c": 52.6, "up": true}, {"h": 51.4, "l": 54.8, "o": 52.6, "c": 53.7, "up": false}, {"h": 32.5, "l": 61.7, "o": 53.7, "c": 40.5, "up": true}, {"h": 36.7, "l": 50.0, "o": 40.5, "c": 46.2, "up": false}, {"h": 45.4, "l": 47.5, "o": 46.2, "c": 46.7, "up": false}, {"h": 40.9, "l": 61.8, "o": 46.7, "c": 56.1, "up": false}], "ma50": [34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4], "ma200": [34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4, 34.4], "labels": [{"label": "75k", "y": 8.7}, {"label": "71k", "y": 25.3}, {"label": "67k", "y": 42.5}, {"label": "63k", "y": 59.8}, {"label": "58k", "y": 76.3}], "dates": ["05-29", "05-30", "05-31", "06-01", "06-02", "06-03", "06-04", "06-05", "06-06", "06-07", "06-08", "06-09", "06-10", "06-11", "06-12", "06-13", "06-14", "06-15", "06-16", "06-17"], "signals": [{"i": 3, "type": "short"}, {"i": 7, "type": "short"}, {"i": 8, "type": "short"}, {"i": 12, "type": "short"}, {"i": 13, "type": "short"}, {"i": 14, "type": "short"}, {"i": 15, "type": "short"}, {"i": 16, "type": "short"}]}, "eth": {"data": [{"h": 8.6, "l": 10.8, "o": 9.4, "c": 10.0, "up": false}, {"h": 8.4, "l": 13.5, "o": 10.0, "c": 11.9, "up": false}, {"h": 8.7, "l": 20.3, "o": 11.9, "c": 17.0, "up": false}, {"h": 13.0, "l": 27.4, "o": 17.0, "c": 23.4, "up": false}, {"h": 17.7, "l": 38.4, "o": 23.4, "c": 32.7, "up": false}, {"h": 28.3, "l": 44.4, "o": 32.7, "c": 39.9, "up": false}, {"h": 26.6, "l": 76.6, "o": 39.9, "c": 63.2, "up": false}, {"h": 61.3, "l": 67.8, "o": 63.2, "c": 65.9, "up": false}, {"h": 52.5, "l": 70.9, "o": 65.9, "c": 57.6, "up": true}, {"h": 45.6, "l": 62.1, "o": 57.6, "c": 50.2, "up": true}, {"h": 46.1, "l": 60.9, "o": 50.2, "c": 56.8, "up": false}, {"h": 52.3, "l": 58.7, "o": 56.8, "c": 54.2, "up": true}, {"h": 53.0, "l": 56.9, "o": 54.2, "c": 55.7, "up": false}, {"h": 52.6, "l": 57.1, "o": 55.7, "c": 53.9, "up": true}, {"h": 49.4, "l": 55.8, "o": 53.9, "c": 51.3, "up": true}, {"h": 49.6, "l": 55.3, "o": 51.3, "c": 53.6, "up": false}, {"h": 19.0, "l": 66.3, "o": 53.6, "c": 31.7, "up": true}, {"h": 27.1, "l": 44.0, "o": 31.7, "c": 39.3, "up": false}, {"h": 38.2, "l": 41.4, "o": 39.3, "c": 40.4, "up": false}, {"h": 37.0, "l": 49.1, "o": 40.4, "c": 45.7, "up": false}], "ma50": [29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5], "ma200": [29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5], "labels": [{"label": "2.0k", "y": 8.8}, {"label": "1.9k", "y": 25.2}, {"label": "1.8k", "y": 42.5}, {"label": "1.6k", "y": 59.8}, {"label": "1.5k", "y": 76.2}], "dates": ["05-29", "05-30", "05-31", "06-01", "06-02", "06-03", "06-04", "06-05", "06-06", "06-07", "06-08", "06-09", "06-10", "06-11", "06-12", "06-13", "06-14", "06-15", "06-16", "06-17"], "signals": [{"i": 3, "type": "short"}, {"i": 8, "type": "short"}, {"i": 12, "type": "short"}, {"i": 13, "type": "short"}, {"i": 14, "type": "short"}, {"i": 15, "type": "short"}, {"i": 16, "type": "short"}, {"i": 17, "type": "short"}]}};
 
 function renderTV(elId, payload) {
   const el = document.getElementById(elId);
