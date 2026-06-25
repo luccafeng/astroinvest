@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-06-24T14:27:35.980806+00:00",
+  "timestamp": "2026-06-25T14:31:32.039761+00:00",
   "btc": {
-    "price": 61228.2,
-    "rsi": 36.254477393634446,
-    "ma50": 71131.746,
-    "ma200": 76409.9725,
+    "price": 59272.3,
+    "rsi": 32.626225957336416,
+    "ma50": 70664.134,
+    "ma200": 76253.8185,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -12,8 +12,8 @@
     "short_score": 3,
     "breakout_20d": false,
     "breakout_55d": false,
-    "breakdown_20d": false,
-    "breakdown_55d": false,
+    "breakdown_20d": true,
+    "breakdown_55d": true,
     "asset": "BTC",
     "action": "WAIT (BEAR regime, no entry)",
     "side": null,
@@ -27,10 +27,10 @@
     "reason": "BEAR regime but short_score=3"
   },
   "eth": {
-    "price": 1648.9,
-    "rsi": 38.36595843907303,
-    "ma50": 1953.3322,
-    "ma200": 2344.51935,
+    "price": 1562.17,
+    "rsi": 33.44634026604771,
+    "ma50": 1936.7830000000001,
+    "ma200": 2337.04255,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -55,16 +55,22 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -20
+    "sentiment": -12
   },
-  "events": [],
+  "events": [
+    {
+      "date": "2026-07-02",
+      "name": "US NFP",
+      "impact": 7
+    }
+  ],
   "macro_bias": {
     "total_score": 1.0,
     "direction": "NEUTRAL",
     "confidence": "MODERATE",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 3.6,
-    "fng": 17
+    "funding_annualized_pct": -1.8,
+    "fng": 12
   }
 }
