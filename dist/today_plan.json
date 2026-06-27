@@ -1,36 +1,10 @@
 {
-  "timestamp": "2026-06-26T14:23:02.603305+00:00",
+  "timestamp": "2026-06-27T13:40:41.936245+00:00",
   "btc": {
-    "price": 60043.5,
-    "rsi": 34.95326308674008,
-    "ma50": 70272.81,
-    "ma200": 76105.6675,
-    "regime": "BEAR",
-    "bull_score": 0,
-    "bear_score": 4,
-    "long_score": 0,
-    "short_score": 4,
-    "breakout_20d": false,
-    "breakout_55d": false,
-    "breakdown_20d": false,
-    "breakdown_55d": false,
-    "asset": "BTC",
-    "action": "STARTER SHORT",
-    "side": "SHORT",
-    "position_pct": 0.06,
-    "capital_usd": 6000.0,
-    "units": 0.0999275525244198,
-    "stop_price": 64778.621379473545,
-    "stop_dist_pct": 0.07886151505947428,
-    "max_risk_pct_of_account": 0.4731690903568456,
-    "urgency": "Wait for clearer signals",
-    "reason": "Good short confluence; await breakdown"
-  },
-  "eth": {
-    "price": 1570.07,
-    "rsi": 33.85653271591423,
-    "ma50": 1922.4373999999998,
-    "ma200": 2329.4239500000003,
+    "price": 60617.5,
+    "rsi": 37.06985257437085,
+    "ma50": 69887.788,
+    "ma200": 75946.6305,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -38,7 +12,33 @@
     "short_score": 3,
     "breakout_20d": false,
     "breakout_55d": false,
-    "breakdown_20d": true,
+    "breakdown_20d": false,
+    "breakdown_55d": false,
+    "asset": "BTC",
+    "action": "WAIT (BEAR regime, no entry)",
+    "side": null,
+    "position_pct": 0.0,
+    "capital_usd": 0.0,
+    "units": 0.0,
+    "stop_price": null,
+    "stop_dist_pct": 0,
+    "max_risk_pct_of_account": 0.0,
+    "urgency": "Wait for clearer signals",
+    "reason": "BEAR regime but short_score=3"
+  },
+  "eth": {
+    "price": 1589.49,
+    "rsi": 35.987639638261015,
+    "ma50": 1908.556,
+    "ma200": 2321.19165,
+    "regime": "BEAR",
+    "bull_score": 1,
+    "bear_score": 3,
+    "long_score": 1,
+    "short_score": 3,
+    "breakout_20d": false,
+    "breakout_55d": false,
+    "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "ETH",
     "action": "WAIT (BEAR regime, no entry)",
@@ -53,9 +53,9 @@
     "reason": "BEAR regime but short_score=3"
   },
   "risk": {
-    "severity": 3,
-    "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -12
+    "severity": 1,
+    "action": "TRADE_NORMAL",
+    "sentiment": -8
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "MODERATE",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 4.8,
-    "fng": 13
+    "funding_annualized_pct": 4.1,
+    "fng": 15
   }
 }
