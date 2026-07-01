@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-06-30T14:16:30.824868+00:00",
+  "timestamp": "2026-07-01T14:33:29.245739+00:00",
   "btc": {
-    "price": 58995.2,
-    "rsi": 33.71766553868166,
-    "ma50": 68598.86200000001,
-    "ma200": 75481.897,
+    "price": 59687.0,
+    "rsi": 37.84537725910797,
+    "ma50": 68173.758,
+    "ma200": 75326.7725,
     "regime": "BEAR",
     "bull_score": 0,
     "bear_score": 4,
@@ -12,25 +12,25 @@
     "short_score": 4,
     "breakout_20d": false,
     "breakout_55d": false,
-    "breakdown_20d": true,
-    "breakdown_55d": true,
+    "breakdown_20d": false,
+    "breakdown_55d": false,
     "asset": "BTC",
-    "action": "STRONG SHORT",
+    "action": "STARTER SHORT",
     "side": "SHORT",
-    "position_pct": 0.2,
-    "capital_usd": 20000.0,
-    "units": 0.3390106313733999,
-    "stop_price": 62761.37864039021,
-    "stop_dist_pct": 0.06383872993718503,
-    "max_risk_pct_of_account": 1.2767745987437007,
-    "urgency": "Enter today, but watch for short squeeze",
-    "reason": "55d low breakdown in BEAR regime + confluence \u22654"
+    "position_pct": 0.06,
+    "capital_usd": 6000.0,
+    "units": 0.100524402298658,
+    "stop_price": 63832.52676001451,
+    "stop_dist_pct": 0.06945443329392509,
+    "max_risk_pct_of_account": 0.41672659976355053,
+    "urgency": "Wait for clearer signals",
+    "reason": "Good short confluence; await breakdown"
   },
   "eth": {
-    "price": 1571.94,
-    "rsi": 35.475696662871215,
-    "ma50": 1863.5618000000002,
-    "ma200": 2297.0426500000003,
+    "price": 1602.83,
+    "rsi": 39.74471613914499,
+    "ma50": 1850.2474,
+    "ma200": 2289.4755,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -53,9 +53,9 @@
     "reason": "BEAR regime but short_score=3"
   },
   "risk": {
-    "severity": 2,
+    "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": 1
+    "sentiment": -19
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "MODERATE",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 4.2,
-    "fng": 15
+    "funding_annualized_pct": 2.3,
+    "fng": 11
   }
 }
