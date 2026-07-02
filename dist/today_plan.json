@@ -1,36 +1,36 @@
 {
-  "timestamp": "2026-07-01T14:33:29.245739+00:00",
+  "timestamp": "2026-07-02T13:58:15.215357+00:00",
   "btc": {
-    "price": 59687.0,
-    "rsi": 37.84537725910797,
-    "ma50": 68173.758,
-    "ma200": 75326.7725,
+    "price": 61861.7,
+    "rsi": 45.555506343352874,
+    "ma50": 67843.508,
+    "ma200": 75193.24699999999,
     "regime": "BEAR",
-    "bull_score": 0,
-    "bear_score": 4,
-    "long_score": 0,
-    "short_score": 4,
+    "bull_score": 1,
+    "bear_score": 3,
+    "long_score": 1,
+    "short_score": 3,
     "breakout_20d": false,
     "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "BTC",
-    "action": "STARTER SHORT",
-    "side": "SHORT",
-    "position_pct": 0.06,
-    "capital_usd": 6000.0,
-    "units": 0.100524402298658,
-    "stop_price": 63832.52676001451,
-    "stop_dist_pct": 0.06945443329392509,
-    "max_risk_pct_of_account": 0.41672659976355053,
+    "action": "WAIT (BEAR regime, no entry)",
+    "side": null,
+    "position_pct": 0.0,
+    "capital_usd": 0.0,
+    "units": 0.0,
+    "stop_price": null,
+    "stop_dist_pct": 0,
+    "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "Good short confluence; await breakdown"
+    "reason": "BEAR regime but short_score=3"
   },
   "eth": {
-    "price": 1602.83,
-    "rsi": 39.74471613914499,
-    "ma50": 1850.2474,
-    "ma200": 2289.4755,
+    "price": 1709.38,
+    "rsi": 50.61594655543647,
+    "ma50": 1840.0478,
+    "ma200": 2282.6862,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -55,7 +55,7 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -19
+    "sentiment": -12
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "MODERATE",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 2.3,
-    "fng": 11
+    "funding_annualized_pct": 6.5,
+    "fng": 19
   }
 }
