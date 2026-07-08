@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-07-07T14:31:13.372892+00:00",
+  "timestamp": "2026-07-08T14:03:27.786561+00:00",
   "btc": {
-    "price": 63187.8,
-    "rsi": 50.11043679528462,
-    "ma50": 66262.398,
-    "ma200": 74570.1255,
+    "price": 61936.9,
+    "rsi": 45.775696506045705,
+    "ma50": 65985.628,
+    "ma200": 74442.70049999999,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
-    "long_score": 2,
+    "long_score": 1,
     "short_score": 3,
     "breakout_20d": false,
     "breakout_55d": false,
@@ -27,10 +27,10 @@
     "reason": "BEAR regime but short_score=3"
   },
   "eth": {
-    "price": 1774.22,
-    "rsi": 55.315458962773505,
-    "ma50": 1797.0998000000002,
-    "ma200": 2252.8811,
+    "price": 1737.28,
+    "rsi": 51.10493181220083,
+    "ma50": 1790.1022,
+    "ma200": 2246.7981,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -53,18 +53,24 @@
     "reason": "BEAR regime but short_score=3"
   },
   "risk": {
-    "severity": 0,
-    "action": "TRADE_NORMAL",
-    "sentiment": -4
+    "severity": 3,
+    "action": "TRADE_NORMAL_WIDER_STOPS",
+    "sentiment": -24
   },
-  "events": [],
+  "events": [
+    {
+      "date": "2026-07-15",
+      "name": "US CPI Release",
+      "impact": 9
+    }
+  ],
   "macro_bias": {
-    "total_score": 0.5,
+    "total_score": 1.0,
     "direction": "NEUTRAL",
-    "confidence": "WEAK",
+    "confidence": "MODERATE",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 4.8,
-    "fng": 27
+    "funding_annualized_pct": 7.9,
+    "fng": 20
   }
 }
