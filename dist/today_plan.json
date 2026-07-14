@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-07-13T14:31:39.950335+00:00",
+  "timestamp": "2026-07-14T13:40:35.333836+00:00",
   "btc": {
-    "price": 62577.0,
-    "rsi": 47.45194835576344,
-    "ma50": 64669.344000000005,
-    "ma200": 73827.417,
+    "price": 63948.9,
+    "rsi": 52.432268141168976,
+    "ma50": 64396.52,
+    "ma200": 73711.66100000001,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -27,16 +27,16 @@
     "reason": "BEAR regime but short_score=3"
   },
   "eth": {
-    "price": 1772.74,
-    "rsi": 52.95782420194597,
-    "ma50": 1757.6904000000002,
-    "ma200": 2217.21,
+    "price": 1879.1,
+    "rsi": 61.825603002799724,
+    "ma50": 1752.815,
+    "ma200": 2212.00895,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
     "long_score": 2,
-    "short_score": 3,
-    "breakout_20d": false,
+    "short_score": 2,
+    "breakout_20d": true,
     "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
@@ -50,12 +50,12 @@
     "stop_dist_pct": 0,
     "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "BEAR regime but short_score=3"
+    "reason": "BEAR regime but short_score=2"
   },
   "risk": {
-    "severity": 5,
-    "action": "REDUCE_SIZE_50",
-    "sentiment": -12
+    "severity": 10,
+    "action": "EXIT_ALL",
+    "sentiment": -18
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 9.4,
-    "fng": 28
+    "funding_annualized_pct": 5.2,
+    "fng": 22
   }
 }
