@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-07-20T14:03:19.602366+00:00",
+  "timestamp": "2026-07-21T13:46:51.427496+00:00",
   "btc": {
-    "price": 64427.2,
-    "rsi": 52.8689545787675,
-    "ma50": 63223.504,
-    "ma200": 73008.9225,
+    "price": 66427.8,
+    "rsi": 59.565890591581166,
+    "ma50": 63152.876000000004,
+    "ma200": 72899.8635,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
     "long_score": 2,
-    "short_score": 3,
-    "breakout_20d": false,
+    "short_score": 2,
+    "breakout_20d": true,
     "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
@@ -24,19 +24,19 @@
     "stop_dist_pct": 0,
     "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "BEAR regime but short_score=3"
+    "reason": "BEAR regime but short_score=2"
   },
   "eth": {
-    "price": 1863.79,
-    "rsi": 57.06467432493371,
-    "ma50": 1732.82,
-    "ma200": 2179.22005,
+    "price": 1931.42,
+    "rsi": 62.44913400167917,
+    "ma50": 1732.8528,
+    "ma200": 2173.6389,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
     "long_score": 2,
     "short_score": 2,
-    "breakout_20d": false,
+    "breakout_20d": true,
     "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
@@ -55,7 +55,7 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -18
+    "sentiment": -12
   },
   "events": [],
   "macro_bias": {
@@ -64,7 +64,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 2.0,
-    "fng": 29
+    "funding_annualized_pct": -3.1,
+    "fng": 25
   }
 }
