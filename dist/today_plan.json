@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-07-21T13:46:51.427496+00:00",
+  "timestamp": "2026-07-22T13:50:13.461441+00:00",
   "btc": {
-    "price": 66427.8,
-    "rsi": 59.565890591581166,
-    "ma50": 63152.876000000004,
-    "ma200": 72899.8635,
+    "price": 65914.6,
+    "rsi": 56.92073438958205,
+    "ma50": 63130.098,
+    "ma200": 72780.827,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
     "long_score": 2,
-    "short_score": 2,
-    "breakout_20d": true,
+    "short_score": 3,
+    "breakout_20d": false,
     "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
@@ -24,13 +24,13 @@
     "stop_dist_pct": 0,
     "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "BEAR regime but short_score=2"
+    "reason": "BEAR regime but short_score=3"
   },
   "eth": {
-    "price": 1931.42,
-    "rsi": 62.44913400167917,
-    "ma50": 1732.8528,
-    "ma200": 2173.6389,
+    "price": 1939.94,
+    "rsi": 63.08053373823689,
+    "ma50": 1733.3575999999998,
+    "ma200": 2167.83295,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -55,16 +55,22 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -12
+    "sentiment": -40
   },
-  "events": [],
+  "events": [
+    {
+      "date": "2026-07-29",
+      "name": "FOMC Rate Decision",
+      "impact": 10
+    }
+  ],
   "macro_bias": {
     "total_score": 0.5,
     "direction": "NEUTRAL",
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": -3.1,
-    "fng": 25
+    "funding_annualized_pct": 3.0,
+    "fng": 33
   }
 }
