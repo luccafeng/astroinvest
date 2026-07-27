@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-07-26T13:19:15.615303+00:00",
+  "timestamp": "2026-07-27T14:30:58.039100+00:00",
   "btc": {
-    "price": 64465.9,
-    "rsi": 51.040785556847275,
-    "ma50": 63263.206000000006,
-    "ma200": 72218.5705,
+    "price": 64689.3,
+    "rsi": 51.88156639355961,
+    "ma50": 63321.155999999995,
+    "ma200": 72089.6015,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -27,15 +27,15 @@
     "reason": "BEAR regime but short_score=3"
   },
   "eth": {
-    "price": 1885.03,
-    "rsi": 56.01964240921014,
-    "ma50": 1748.4676000000002,
-    "ma200": 2141.5575,
+    "price": 1929.47,
+    "rsi": 59.93269863438005,
+    "ma50": 1755.0462,
+    "ma200": 2135.8308500000003,
     "regime": "BEAR",
-    "bull_score": 0,
-    "bear_score": 4,
-    "long_score": 1,
-    "short_score": 3,
+    "bull_score": 1,
+    "bear_score": 3,
+    "long_score": 2,
+    "short_score": 2,
     "breakout_20d": false,
     "breakout_55d": false,
     "breakdown_20d": false,
@@ -50,12 +50,12 @@
     "stop_dist_pct": 0,
     "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "BEAR regime but short_score=3"
+    "reason": "BEAR regime but short_score=2"
   },
   "risk": {
-    "severity": 3,
-    "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -35
+    "severity": 5,
+    "action": "REDUCE_SIZE_50",
+    "sentiment": -15
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 0.4,
-    "fng": 26
+    "funding_annualized_pct": 7.2,
+    "fng": 30
   }
 }
