@@ -1,41 +1,41 @@
 {
-  "timestamp": "2026-07-27T14:30:58.039100+00:00",
+  "timestamp": "2026-07-28T14:03:57.260623+00:00",
   "btc": {
-    "price": 64689.3,
-    "rsi": 51.88156639355961,
-    "ma50": 63321.155999999995,
-    "ma200": 72089.6015,
+    "price": 63190.5,
+    "rsi": 45.540943149028124,
+    "ma50": 63306.904,
+    "ma200": 71948.993,
     "regime": "BEAR",
-    "bull_score": 1,
-    "bear_score": 3,
-    "long_score": 2,
-    "short_score": 3,
+    "bull_score": 0,
+    "bear_score": 4,
+    "long_score": 1,
+    "short_score": 4,
     "breakout_20d": false,
     "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "BTC",
-    "action": "WAIT (BEAR regime, no entry)",
-    "side": null,
-    "position_pct": 0.0,
-    "capital_usd": 0.0,
-    "units": 0.0,
-    "stop_price": null,
-    "stop_dist_pct": 0,
-    "max_risk_pct_of_account": 0.0,
+    "action": "STARTER SHORT",
+    "side": "SHORT",
+    "position_pct": 0.06,
+    "capital_usd": 6000.0,
+    "units": 0.09495098155577184,
+    "stop_price": 65729.75241600942,
+    "stop_dist_pct": 0.04018408488632661,
+    "max_risk_pct_of_account": 0.24110450931795965,
     "urgency": "Wait for clearer signals",
-    "reason": "BEAR regime but short_score=3"
+    "reason": "Good short confluence; await breakdown"
   },
   "eth": {
-    "price": 1929.47,
-    "rsi": 59.93269863438005,
-    "ma50": 1755.0462,
-    "ma200": 2135.8308500000003,
+    "price": 1875.56,
+    "rsi": 53.45229088775146,
+    "ma50": 1758.6894,
+    "ma200": 2129.6372,
     "regime": "BEAR",
-    "bull_score": 1,
-    "bear_score": 3,
-    "long_score": 2,
-    "short_score": 2,
+    "bull_score": 0,
+    "bear_score": 4,
+    "long_score": 1,
+    "short_score": 3,
     "breakout_20d": false,
     "breakout_55d": false,
     "breakdown_20d": false,
@@ -50,12 +50,12 @@
     "stop_dist_pct": 0,
     "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "BEAR regime but short_score=2"
+    "reason": "BEAR regime but short_score=3"
   },
   "risk": {
     "severity": 5,
     "action": "REDUCE_SIZE_50",
-    "sentiment": -15
+    "sentiment": -36
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 7.2,
-    "fng": 30
+    "funding_annualized_pct": -1.1,
+    "fng": 29
   }
 }
