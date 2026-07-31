@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-07-30T13:57:33.825480+00:00",
+  "timestamp": "2026-07-31T14:03:00.050942+00:00",
   "btc": {
-    "price": 65050.1,
-    "rsi": 53.717249297897894,
-    "ma50": 63426.65,
-    "ma200": 71690.089,
+    "price": 63211.0,
+    "rsi": 45.381778559074924,
+    "ma50": 63429.452000000005,
+    "ma200": 71546.22850000001,
     "regime": "BEAR",
     "bull_score": 0,
     "bear_score": 4,
@@ -19,21 +19,21 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 0.09223659917509736,
-    "stop_price": 67652.104,
+    "units": 0.09492018794197213,
+    "stop_price": 65739.44,
     "stop_dist_pct": 0.04,
     "max_risk_pct_of_account": 0.24,
     "urgency": "Wait for clearer signals",
     "reason": "Good short confluence; await breakdown"
   },
   "eth": {
-    "price": 1930.8,
-    "rsi": 58.92033893937969,
-    "ma50": 1770.1524,
-    "ma200": 2117.9056,
+    "price": 1865.41,
+    "rsi": 51.09624081509223,
+    "ma50": 1774.3159999999998,
+    "ma200": 2111.5215,
     "regime": "BEAR",
-    "bull_score": 0,
-    "bear_score": 4,
+    "bull_score": 1,
+    "bear_score": 3,
     "long_score": 1,
     "short_score": 3,
     "breakout_20d": false,
@@ -53,18 +53,24 @@
     "reason": "BEAR regime but short_score=3"
   },
   "risk": {
-    "severity": 3,
-    "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -12
+    "severity": 1,
+    "action": "TRADE_NORMAL",
+    "sentiment": -9
   },
-  "events": [],
+  "events": [
+    {
+      "date": "2026-08-07",
+      "name": "US NFP",
+      "impact": 7
+    }
+  ],
   "macro_bias": {
     "total_score": 0.5,
     "direction": "NEUTRAL",
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 6.9,
-    "fng": 28
+    "funding_annualized_pct": 7.1,
+    "fng": 25
   }
 }
