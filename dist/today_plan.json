@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04T14:08:16.096231+00:00",
+  "timestamp": "2026-08-05T14:06:01.755402+00:00",
   "btc": {
-    "price": 63734.6,
-    "rsi": 48.72353682318494,
-    "ma50": 63306.153999999995,
-    "ma200": 70903.782,
+    "price": 64517.9,
+    "rsi": 52.667275907309005,
+    "ma50": 63286.768,
+    "ma200": 70750.4475,
     "regime": "BEAR",
     "bull_score": 0,
     "bear_score": 4,
@@ -19,49 +19,54 @@
     "side": "SHORT",
     "position_pct": 0.06,
     "capital_usd": 6000.0,
-    "units": 0.09414038842324264,
-    "stop_price": 66283.984,
+    "units": 0.0929974472200738,
+    "stop_price": 67098.61600000001,
     "stop_dist_pct": 0.04,
     "max_risk_pct_of_account": 0.24,
     "urgency": "Wait for clearer signals",
     "reason": "Good short confluence; await breakdown"
   },
   "eth": {
-    "price": 1863.03,
-    "rsi": 50.76111279682251,
-    "ma50": 1786.361,
-    "ma200": 2083.15815,
+    "price": 1882.41,
+    "rsi": 53.33719394178548,
+    "ma50": 1788.5610000000001,
+    "ma200": 2075.9715,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
     "long_score": 1,
-    "short_score": 4,
+    "short_score": 3,
     "breakout_20d": false,
     "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "ETH",
-    "action": "STARTER SHORT",
-    "side": "SHORT",
-    "position_pct": 0.06,
-    "capital_usd": 6000.0,
-    "units": 3.220560055393633,
-    "stop_price": 2049.333,
-    "stop_dist_pct": 0.1,
-    "max_risk_pct_of_account": 0.6,
+    "action": "WAIT (BEAR regime, no entry)",
+    "side": null,
+    "position_pct": 0.0,
+    "capital_usd": 0.0,
+    "units": 0.0,
+    "stop_price": null,
+    "stop_dist_pct": 0,
+    "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "Good short confluence; await breakdown"
+    "reason": "BEAR regime but short_score=3"
   },
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -16
+    "sentiment": -15
   },
   "events": [
     {
       "date": "2026-08-07",
       "name": "US NFP",
       "impact": 7
+    },
+    {
+      "date": "2026-08-12",
+      "name": "US CPI Release",
+      "impact": 9
     }
   ],
   "macro_bias": {
@@ -70,7 +75,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 11.0,
-    "fng": 25
+    "funding_annualized_pct": 3.1,
+    "fng": 27
   }
 }
