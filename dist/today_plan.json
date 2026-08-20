@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-19T12:42:41.269100+00:00",
+  "timestamp": "2026-08-20T12:45:35.161143+00:00",
   "btc": {
-    "price": 64874.4,
-    "rsi": 56.541946062247796,
-    "ma50": 63916.282,
-    "ma200": 69039.025,
-    "regime": "NEUTRAL",
-    "bull_score": 2,
-    "bear_score": 2,
-    "long_score": 2,
-    "short_score": 3,
-    "breakout_20d": false,
-    "breakout_55d": false,
+    "price": 71698.3,
+    "rsi": 78.81237209068742,
+    "ma50": 64220.937999999995,
+    "ma200": 69027.924,
+    "regime": "BULL",
+    "bull_score": 3,
+    "bear_score": 1,
+    "long_score": 3,
+    "short_score": 2,
+    "breakout_20d": true,
+    "breakout_55d": true,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "BTC",
-    "action": "FLAT or CARRY (NEUTRAL regime)",
+    "action": "WAIT (BULL regime, no entry)",
     "side": null,
     "position_pct": 0.0,
     "capital_usd": 0.0,
@@ -24,24 +24,24 @@
     "stop_dist_pct": 0,
     "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "Regime is transitioning - dont fight it | Consider funding rate carry (market-neutral)"
+    "reason": "BULL regime but long_score=3"
   },
   "eth": {
-    "price": 1930.22,
-    "rsi": 59.50805108300158,
-    "ma50": 1857.6345999999999,
-    "ma200": 2002.4507,
-    "regime": "NEUTRAL",
-    "bull_score": 2,
-    "bear_score": 2,
-    "long_score": 2,
-    "short_score": 3,
+    "price": 2281.46,
+    "rsi": 83.58866156313401,
+    "ma50": 1873.9744,
+    "ma200": 2003.0571500000003,
+    "regime": "BULL",
+    "bull_score": 3,
+    "bear_score": 1,
+    "long_score": 3,
+    "short_score": 2,
     "breakout_20d": true,
-    "breakout_55d": false,
+    "breakout_55d": true,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "ETH",
-    "action": "FLAT or CARRY (NEUTRAL regime)",
+    "action": "WAIT (BULL regime, no entry)",
     "side": null,
     "position_pct": 0.0,
     "capital_usd": 0.0,
@@ -50,12 +50,12 @@
     "stop_dist_pct": 0,
     "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "Regime is transitioning - dont fight it | Consider funding rate carry (market-neutral)"
+    "reason": "BULL regime but long_score=3"
   },
   "risk": {
-    "severity": 1,
-    "action": "TRADE_NORMAL",
-    "sentiment": -7
+    "severity": 3,
+    "action": "TRADE_NORMAL_WIDER_STOPS",
+    "sentiment": -13
   },
   "events": [],
   "macro_bias": {
@@ -64,7 +64,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 1.9,
-    "fng": 46
+    "funding_annualized_pct": 10.3,
+    "fng": 62
   }
 }
