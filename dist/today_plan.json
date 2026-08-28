@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026-08-27T21:48:24.183747+00:00",
+  "timestamp": "2026-08-28T21:44:10.280821+00:00",
   "btc": {
-    "price": 80072.8,
-    "rsi": 80.22424302441442,
-    "ma50": 66778.052,
-    "ma200": 69287.813,
+    "price": 77453.4,
+    "rsi": 68.69681444795977,
+    "ma50": 67011.35399999999,
+    "ma200": 69319.925,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
     "long_score": 3,
-    "short_score": 2,
+    "short_score": 1,
     "breakout_20d": false,
     "breakout_55d": false,
     "breakdown_20d": false,
@@ -27,10 +27,10 @@
     "reason": "BULL regime but long_score=3"
   },
   "eth": {
-    "price": 2501.99,
-    "rsi": 81.65447701704136,
-    "ma50": 1987.751,
-    "ma200": 2016.7547,
+    "price": 2429.22,
+    "rsi": 71.98729254910208,
+    "ma50": 1999.9122,
+    "ma200": 2018.6372499999998,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
@@ -53,18 +53,24 @@
     "reason": "BULL regime but long_score=3"
   },
   "risk": {
-    "severity": 1,
+    "severity": 0,
     "action": "TRADE_NORMAL",
-    "sentiment": -10
+    "sentiment": -2
   },
-  "events": [],
+  "events": [
+    {
+      "date": "2026-09-04",
+      "name": "US NFP",
+      "impact": 7
+    }
+  ],
   "macro_bias": {
     "total_score": -0.5,
     "direction": "NEUTRAL",
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 0.6,
-    "fng": 71
+    "funding_annualized_pct": 11.0,
+    "fng": 73
   }
 }
