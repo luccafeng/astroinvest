@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-29T16:14:55.882224+00:00",
+  "timestamp": "2026-08-30T16:05:11.812765+00:00",
   "btc": {
-    "price": 77948.1,
-    "rsi": 70.50478838568549,
-    "ma50": 67294.906,
-    "ma200": 69379.079,
+    "price": 78965.2,
+    "rsi": 72.30257223155701,
+    "ma50": 67608.128,
+    "ma200": 69442.63,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
@@ -27,35 +27,35 @@
     "reason": "BULL regime but long_score=3"
   },
   "eth": {
-    "price": 2447.7,
-    "rsi": 74.0610896490049,
-    "ma50": 2012.885,
-    "ma200": 2021.30835,
+    "price": 2486.06,
+    "rsi": 75.79118937212934,
+    "ma50": 2026.8526000000002,
+    "ma200": 2024.1607000000001,
     "regime": "BULL",
-    "bull_score": 3,
-    "bear_score": 1,
-    "long_score": 3,
-    "short_score": 2,
+    "bull_score": 4,
+    "bear_score": 0,
+    "long_score": 4,
+    "short_score": 1,
     "breakout_20d": false,
     "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "ETH",
-    "action": "WAIT (BULL regime, no entry)",
-    "side": null,
-    "position_pct": 0.0,
-    "capital_usd": 0.0,
-    "units": 0.0,
-    "stop_price": null,
-    "stop_dist_pct": 0,
-    "max_risk_pct_of_account": 0.0,
+    "action": "STARTER LONG",
+    "side": "LONG",
+    "position_pct": 0.08,
+    "capital_usd": 8000.0,
+    "units": 3.2179432515707584,
+    "stop_price": 2287.1752,
+    "stop_dist_pct": 0.08,
+    "max_risk_pct_of_account": 0.64,
     "urgency": "Wait for clearer signals",
-    "reason": "BULL regime but long_score=3"
+    "reason": "Good long confluence; await breakout"
   },
   "risk": {
-    "severity": 0,
-    "action": "TRADE_NORMAL",
-    "sentiment": 0
+    "severity": 3,
+    "action": "TRADE_NORMAL_WIDER_STOPS",
+    "sentiment": -14
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 5.0,
-    "fng": 68
+    "funding_annualized_pct": 3.7,
+    "fng": 69
   }
 }
