@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-09-02T15:59:58.452282+00:00",
+  "timestamp": "2026-09-03T15:49:38.437004+00:00",
   "btc": {
-    "price": 77280.7,
-    "rsi": 64.95065603620438,
-    "ma50": 68157.018,
-    "ma200": 69524.23550000001,
-    "regime": "NEUTRAL",
-    "bull_score": 2,
-    "bear_score": 2,
-    "long_score": 2,
+    "price": 80788.5,
+    "rsi": 72.08174713303734,
+    "ma50": 68464.484,
+    "ma200": 69582.75,
+    "regime": "BULL",
+    "bull_score": 3,
+    "bear_score": 1,
+    "long_score": 3,
     "short_score": 2,
-    "breakout_20d": false,
-    "breakout_55d": false,
+    "breakout_20d": true,
+    "breakout_55d": true,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "BTC",
-    "action": "FLAT or CARRY (NEUTRAL regime)",
+    "action": "WAIT (BULL regime, no entry)",
     "side": null,
     "position_pct": 0.0,
     "capital_usd": 0.0,
@@ -24,13 +24,13 @@
     "stop_dist_pct": 0,
     "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "Regime is transitioning - dont fight it | Consider funding rate carry (market-neutral)"
+    "reason": "BULL regime but long_score=3"
   },
   "eth": {
-    "price": 2390.65,
-    "rsi": 63.54364956214626,
-    "ma50": 2050.2454,
-    "ma200": 2027.6554999999998,
+    "price": 2489.0,
+    "rsi": 69.48293553005036,
+    "ma50": 2061.4004,
+    "ma200": 2030.0453000000002,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
@@ -53,9 +53,9 @@
     "reason": "BULL regime but long_score=3"
   },
   "risk": {
-    "severity": 1,
-    "action": "TRADE_NORMAL",
-    "sentiment": -7
+    "severity": 3,
+    "action": "TRADE_NORMAL_WIDER_STOPS",
+    "sentiment": -22
   },
   "events": [
     {
@@ -65,12 +65,12 @@
     }
   ],
   "macro_bias": {
-    "total_score": 0.0,
+    "total_score": -0.5,
     "direction": "NEUTRAL",
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 8.4,
-    "fng": 63
+    "funding_annualized_pct": 4.0,
+    "fng": 65
   }
 }
