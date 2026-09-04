@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-09-03T15:49:38.437004+00:00",
+  "timestamp": "2026-09-04T15:47:52.240553+00:00",
   "btc": {
-    "price": 80788.5,
-    "rsi": 72.08174713303734,
-    "ma50": 68464.484,
-    "ma200": 69582.75,
-    "regime": "BULL",
-    "bull_score": 3,
-    "bear_score": 1,
-    "long_score": 3,
+    "price": 79460.4,
+    "rsi": 65.47287388460924,
+    "ma50": 68771.024,
+    "ma200": 69645.20850000001,
+    "regime": "NEUTRAL",
+    "bull_score": 2,
+    "bear_score": 2,
+    "long_score": 2,
     "short_score": 2,
-    "breakout_20d": true,
-    "breakout_55d": true,
+    "breakout_20d": false,
+    "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "BTC",
-    "action": "WAIT (BULL regime, no entry)",
+    "action": "FLAT or CARRY (NEUTRAL regime)",
     "side": null,
     "position_pct": 0.0,
     "capital_usd": 0.0,
@@ -24,13 +24,13 @@
     "stop_dist_pct": 0,
     "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "BULL regime but long_score=3"
+    "reason": "Regime is transitioning - dont fight it | Consider funding rate carry (market-neutral)"
   },
   "eth": {
-    "price": 2489.0,
-    "rsi": 69.48293553005036,
-    "ma50": 2061.4004,
-    "ma200": 2030.0453000000002,
+    "price": 2452.61,
+    "rsi": 63.85181849804465,
+    "ma50": 2073.372,
+    "ma200": 2032.6647999999998,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
@@ -55,13 +55,18 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -22
+    "sentiment": -16
   },
   "events": [
     {
       "date": "2026-09-04",
       "name": "US NFP",
       "impact": 7
+    },
+    {
+      "date": "2026-09-11",
+      "name": "US CPI Release",
+      "impact": 9
     }
   ],
   "macro_bias": {
@@ -70,7 +75,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 4.0,
-    "fng": 65
+    "funding_annualized_pct": 4.2,
+    "fng": 74
   }
 }
