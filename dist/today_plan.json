@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-09-05T14:38:07.195076+00:00",
+  "timestamp": "2026-09-06T14:58:17.012613+00:00",
   "btc": {
-    "price": 79726.9,
-    "rsi": 65.9501824537021,
-    "ma50": 69095.75,
-    "ma200": 69706.68950000001,
+    "price": 79610.0,
+    "rsi": 65.32936160055733,
+    "ma50": 69407.01400000001,
+    "ma200": 69766.628,
     "regime": "NEUTRAL",
     "bull_score": 2,
     "bear_score": 2,
@@ -27,10 +27,10 @@
     "reason": "Regime is transitioning - dont fight it | Consider funding rate carry (market-neutral)"
   },
   "eth": {
-    "price": 2457.76,
-    "rsi": 64.14041422206544,
-    "ma50": 2085.8992000000003,
-    "ma200": 2035.1078,
+    "price": 2479.8,
+    "rsi": 65.46982733845792,
+    "ma50": 2098.6621999999998,
+    "ma200": 2037.5903,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
@@ -53,9 +53,9 @@
     "reason": "BULL regime but long_score=3"
   },
   "risk": {
-    "severity": 3,
-    "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -11
+    "severity": 1,
+    "action": "TRADE_NORMAL",
+    "sentiment": -9
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": -4.3,
+    "funding_annualized_pct": 1.4,
     "fng": 73
   }
 }
