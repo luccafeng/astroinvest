@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-09-10T15:52:33.870424+00:00",
+  "timestamp": "2026-09-11T15:54:17.930963+00:00",
   "btc": {
-    "price": 77169.9,
-    "rsi": 55.044298656078915,
-    "ma50": 70421.31,
-    "ma200": 69983.2215,
+    "price": 77750.2,
+    "rsi": 56.93794050419256,
+    "ma50": 70678.772,
+    "ma200": 70044.07549999999,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
@@ -27,17 +27,17 @@
     "reason": "BULL regime but long_score=3"
   },
   "eth": {
-    "price": 2438.29,
-    "rsi": 58.74618818526478,
-    "ma50": 2143.664,
-    "ma200": 2047.91795,
+    "price": 2570.41,
+    "rsi": 67.616072477747,
+    "ma50": 2157.2255999999998,
+    "ma200": 2051.3072,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
     "long_score": 3,
     "short_score": 1,
-    "breakout_20d": false,
-    "breakout_55d": false,
+    "breakout_20d": true,
+    "breakout_55d": true,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "ETH",
@@ -55,7 +55,7 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -31
+    "sentiment": -30
   },
   "events": [
     {
@@ -70,12 +70,12 @@
     }
   ],
   "macro_bias": {
-    "total_score": -0.5,
+    "total_score": 0.0,
     "direction": "NEUTRAL",
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 10.6,
-    "fng": 69
+    "funding_annualized_pct": 6.4,
+    "fng": 56
   }
 }
