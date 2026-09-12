@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-09-11T15:54:17.930963+00:00",
+  "timestamp": "2026-09-12T15:01:47.459732+00:00",
   "btc": {
-    "price": 77750.2,
-    "rsi": 56.93794050419256,
-    "ma50": 70678.772,
-    "ma200": 70044.07549999999,
+    "price": 77472.2,
+    "rsi": 55.7746745643983,
+    "ma50": 70945.768,
+    "ma200": 70111.4585,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
@@ -27,17 +27,17 @@
     "reason": "BULL regime but long_score=3"
   },
   "eth": {
-    "price": 2570.41,
-    "rsi": 67.616072477747,
-    "ma50": 2157.2255999999998,
-    "ma200": 2051.3072,
+    "price": 2539.73,
+    "rsi": 64.77864345178108,
+    "ma50": 2170.5591999999997,
+    "ma200": 2054.71355,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
     "long_score": 3,
     "short_score": 1,
-    "breakout_20d": true,
-    "breakout_55d": true,
+    "breakout_20d": false,
+    "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "ETH",
@@ -55,14 +55,9 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -30
+    "sentiment": -29
   },
   "events": [
-    {
-      "date": "2026-09-11",
-      "name": "US CPI Release",
-      "impact": 9
-    },
     {
       "date": "2026-09-16",
       "name": "FOMC Rate Decision",
@@ -75,7 +70,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 6.4,
-    "fng": 56
+    "funding_annualized_pct": 3.7,
+    "fng": 63
   }
 }
