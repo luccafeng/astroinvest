@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-09-16T16:11:28.841394+00:00",
+  "timestamp": "2026-09-17T16:18:04.205153+00:00",
   "btc": {
-    "price": 75716.0,
-    "rsi": 47.86887418153891,
-    "ma50": 72190.156,
-    "ma200": 70366.807,
+    "price": 76787.6,
+    "rsi": 51.835266290092854,
+    "ma50": 72452.51199999999,
+    "ma200": 70410.48,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
     "long_score": 3,
-    "short_score": 2,
+    "short_score": 1,
     "breakout_20d": false,
     "breakout_55d": false,
-    "breakdown_20d": true,
+    "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "BTC",
     "action": "WAIT (BULL regime, no entry)",
@@ -27,10 +27,10 @@
     "reason": "BULL regime but long_score=3"
   },
   "eth": {
-    "price": 2392.86,
-    "rsi": 49.58489986950185,
-    "ma50": 2224.221,
-    "ma200": 2066.30175,
+    "price": 2471.4,
+    "rsi": 55.83967554552998,
+    "ma50": 2236.8145999999997,
+    "ma200": 2068.8074,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
@@ -38,7 +38,7 @@
     "short_score": 1,
     "breakout_20d": false,
     "breakout_55d": false,
-    "breakdown_20d": true,
+    "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "ETH",
     "action": "WAIT (BULL regime, no entry)",
@@ -53,24 +53,18 @@
     "reason": "BULL regime but long_score=3"
   },
   "risk": {
-    "severity": 10,
-    "action": "EXIT_ALL",
-    "sentiment": -15
+    "severity": 1,
+    "action": "TRADE_NORMAL",
+    "sentiment": -7
   },
-  "events": [
-    {
-      "date": "2026-09-16",
-      "name": "FOMC Rate Decision",
-      "impact": 10
-    }
-  ],
+  "events": [],
   "macro_bias": {
     "total_score": 0.0,
     "direction": "NEUTRAL",
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 4.5,
-    "fng": 51
+    "funding_annualized_pct": 10.3,
+    "fng": 50
   }
 }
