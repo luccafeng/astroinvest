@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-09-19T15:24:19.638407+00:00",
+  "timestamp": "2026-09-20T15:29:42.223468+00:00",
   "btc": {
-    "price": 81656.9,
-    "rsi": 65.09048138352765,
-    "ma50": 72909.972,
-    "ma200": 70499.84550000001,
+    "price": 80684.4,
+    "rsi": 61.257685694114336,
+    "ma50": 73263.466,
+    "ma200": 70536.26,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
     "long_score": 3,
     "short_score": 1,
-    "breakout_20d": true,
-    "breakout_55d": true,
+    "breakout_20d": false,
+    "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "BTC",
@@ -27,17 +27,17 @@
     "reason": "BULL regime but long_score=3"
   },
   "eth": {
-    "price": 2641.88,
-    "rsi": 65.957997136975,
-    "ma50": 2254.6462,
-    "ma200": 2072.7338,
+    "price": 2593.5,
+    "rsi": 61.46814869114016,
+    "ma50": 2269.0976,
+    "ma200": 2074.9464,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
     "long_score": 3,
     "short_score": 1,
-    "breakout_20d": true,
-    "breakout_55d": true,
+    "breakout_20d": false,
+    "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "ETH",
@@ -55,7 +55,7 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -15
+    "sentiment": -12
   },
   "events": [],
   "macro_bias": {
@@ -64,7 +64,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 11.0,
+    "funding_annualized_pct": 8.7,
     "fng": 71
   }
 }
