@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-09-26T15:50:34.650326+00:00",
+  "timestamp": "2026-09-27T16:26:48.424417+00:00",
   "btc": {
-    "price": 84086.5,
-    "rsi": 62.900295208569986,
-    "ma50": 75744.232,
-    "ma200": 71003.5135,
+    "price": 84592.8,
+    "rsi": 64.0399844649038,
+    "ma50": 76520.602,
+    "ma200": 71146.3355,
     "regime": "BULL",
     "bull_score": 4,
     "bear_score": 0,
@@ -19,43 +19,43 @@
     "side": "LONG",
     "position_pct": 0.08,
     "capital_usd": 8000.0,
-    "units": 0.09514012356323548,
-    "stop_price": 77790.25841370427,
-    "stop_dist_pct": 0.07487815031301956,
-    "max_risk_pct_of_account": 0.5990252025041565,
+    "units": 0.09457069632403703,
+    "stop_price": 78348.7056916397,
+    "stop_dist_pct": 0.07381354333182394,
+    "max_risk_pct_of_account": 0.5905083466545915,
     "urgency": "Wait for clearer signals",
     "reason": "Good long confluence; await breakout"
   },
   "eth": {
-    "price": 2689.95,
-    "rsi": 62.79981529143871,
-    "ma50": 2367.8572,
-    "ma200": 2095.66945,
+    "price": 2692.74,
+    "rsi": 62.86204808604017,
+    "ma50": 2398.5956,
+    "ma200": 2101.9866500000003,
     "regime": "BULL",
-    "bull_score": 4,
-    "bear_score": 0,
-    "long_score": 4,
-    "short_score": 0,
+    "bull_score": 3,
+    "bear_score": 1,
+    "long_score": 3,
+    "short_score": 1,
     "breakout_20d": false,
     "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "ETH",
-    "action": "STARTER LONG",
-    "side": "LONG",
-    "position_pct": 0.08,
-    "capital_usd": 8000.0,
-    "units": 2.974032974590606,
-    "stop_price": 2474.754,
-    "stop_dist_pct": 0.08,
-    "max_risk_pct_of_account": 0.64,
+    "action": "WAIT (BULL regime, no entry)",
+    "side": null,
+    "position_pct": 0.0,
+    "capital_usd": 0.0,
+    "units": 0.0,
+    "stop_price": null,
+    "stop_dist_pct": 0,
+    "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "Good long confluence; await breakout"
+    "reason": "BULL regime but long_score=3"
   },
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -35
+    "sentiment": -21
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": -0.3,
-    "fng": 74
+    "funding_annualized_pct": -0.7,
+    "fng": 70
   }
 }
