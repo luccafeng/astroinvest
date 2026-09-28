@@ -1,36 +1,36 @@
 {
-  "timestamp": "2026-09-27T16:26:48.424417+00:00",
+  "timestamp": "2026-09-28T19:16:51.338113+00:00",
   "btc": {
-    "price": 84592.8,
-    "rsi": 64.0399844649038,
-    "ma50": 76520.602,
-    "ma200": 71146.3355,
+    "price": 83695.4,
+    "rsi": 60.33719352847468,
+    "ma50": 76884.116,
+    "ma200": 71199.54400000001,
     "regime": "BULL",
-    "bull_score": 4,
-    "bear_score": 0,
-    "long_score": 4,
-    "short_score": 0,
+    "bull_score": 3,
+    "bear_score": 1,
+    "long_score": 3,
+    "short_score": 1,
     "breakout_20d": false,
     "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "BTC",
-    "action": "STARTER LONG",
-    "side": "LONG",
-    "position_pct": 0.08,
-    "capital_usd": 8000.0,
-    "units": 0.09457069632403703,
-    "stop_price": 78348.7056916397,
-    "stop_dist_pct": 0.07381354333182394,
-    "max_risk_pct_of_account": 0.5905083466545915,
+    "action": "WAIT (BULL regime, no entry)",
+    "side": null,
+    "position_pct": 0.0,
+    "capital_usd": 0.0,
+    "units": 0.0,
+    "stop_price": null,
+    "stop_dist_pct": 0,
+    "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "Good long confluence; await breakout"
+    "reason": "BULL regime but long_score=3"
   },
   "eth": {
-    "price": 2692.74,
-    "rsi": 62.86204808604017,
-    "ma50": 2398.5956,
-    "ma200": 2101.9866500000003,
+    "price": 2684.99,
+    "rsi": 61.85039200794344,
+    "ma50": 2414.4541999999997,
+    "ma200": 2104.6964500000004,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
@@ -55,7 +55,7 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -21
+    "sentiment": -30
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": -0.7,
-    "fng": 70
+    "funding_annualized_pct": 3.5,
+    "fng": 74
   }
 }
