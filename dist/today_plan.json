@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-10-15T16:21:28.134430+00:00",
+  "timestamp": "2026-10-16T16:07:49.398439+00:00",
   "btc": {
-    "price": 82378.8,
-    "rsi": 49.315201298083856,
-    "ma50": 81343.73599999999,
-    "ma200": 72371.45850000001,
+    "price": 81399.5,
+    "rsi": 46.07354117063728,
+    "ma50": 81384.644,
+    "ma200": 72439.6695,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
@@ -27,10 +27,10 @@
     "reason": "BULL regime but long_score=3"
   },
   "eth": {
-    "price": 2437.82,
-    "rsi": 37.81611142624454,
-    "ma50": 2554.7938,
-    "ma200": 2143.25315,
+    "price": 2432.07,
+    "rsi": 37.422761354547575,
+    "ma50": 2553.8632000000002,
+    "ma200": 2145.10565,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
@@ -38,7 +38,7 @@
     "short_score": 2,
     "breakout_20d": false,
     "breakout_55d": false,
-    "breakdown_20d": false,
+    "breakdown_20d": true,
     "breakdown_55d": false,
     "asset": "ETH",
     "action": "WAIT (BULL regime, no entry)",
@@ -55,22 +55,16 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -18
+    "sentiment": -14
   },
-  "events": [
-    {
-      "date": "2026-10-15",
-      "name": "US CPI Release",
-      "impact": 9
-    }
-  ],
+  "events": [],
   "macro_bias": {
     "total_score": 0.0,
     "direction": "NEUTRAL",
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 4.3,
-    "fng": 53
+    "funding_annualized_pct": 6.1,
+    "fng": 63
   }
 }
