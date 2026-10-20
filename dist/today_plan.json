@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-10-19T18:21:55.828339+00:00",
+  "timestamp": "2026-10-20T16:23:19.795400+00:00",
   "btc": {
-    "price": 81960.4,
-    "rsi": 48.62957165786139,
-    "ma50": 81579.764,
-    "ma200": 72651.79400000001,
+    "price": 82426.9,
+    "rsi": 50.49930627084102,
+    "ma50": 81683.014,
+    "ma200": 72730.2815,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
@@ -27,14 +27,14 @@
     "reason": "BULL regime but long_score=3"
   },
   "eth": {
-    "price": 2397.02,
-    "rsi": 35.93034682490952,
-    "ma50": 2548.9826000000003,
-    "ma200": 2149.6236,
+    "price": 2434.39,
+    "rsi": 41.32036960263626,
+    "ma50": 2549.5732000000003,
+    "ma200": 2151.73535,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
-    "long_score": 2,
+    "long_score": 3,
     "short_score": 2,
     "breakout_20d": false,
     "breakout_55d": false,
@@ -50,12 +50,12 @@
     "stop_dist_pct": 0,
     "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "BULL regime but long_score=2"
+    "reason": "BULL regime but long_score=3"
   },
   "risk": {
-    "severity": 3,
-    "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -18
+    "severity": 1,
+    "action": "TRADE_NORMAL",
+    "sentiment": -7
   },
   "events": [],
   "macro_bias": {
@@ -64,7 +64,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 10.8,
-    "fng": 59
+    "funding_annualized_pct": 6.1,
+    "fng": 55
   }
 }
