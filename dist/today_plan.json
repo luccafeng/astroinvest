@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-10-28T17:55:08.053708+00:00",
+  "timestamp": "2026-10-29T18:03:11.709054+00:00",
   "btc": {
-    "price": 80835.1,
-    "rsi": 46.04569708296911,
-    "ma50": 81970.194,
-    "ma200": 73146.2475,
+    "price": 80814.7,
+    "rsi": 46.27270576309419,
+    "ma50": 82060.3,
+    "ma200": 73195.686,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
@@ -27,10 +27,10 @@
     "reason": "BULL regime but long_score=3"
   },
   "eth": {
-    "price": 2345.98,
-    "rsi": 40.052236430881564,
-    "ma50": 2532.223,
-    "ma200": 2159.2297,
+    "price": 2338.61,
+    "rsi": 40.174752631006506,
+    "ma50": 2530.6278,
+    "ma200": 2159.9903,
     "regime": "NEUTRAL",
     "bull_score": 2,
     "bear_score": 2,
@@ -53,24 +53,18 @@
     "reason": "Regime is transitioning - dont fight it | Consider funding rate carry (market-neutral)"
   },
   "risk": {
-    "severity": 10,
-    "action": "EXIT_ALL",
-    "sentiment": -7
+    "severity": 3,
+    "action": "TRADE_NORMAL_WIDER_STOPS",
+    "sentiment": -11
   },
-  "events": [
-    {
-      "date": "2026-10-28",
-      "name": "FOMC Rate Decision",
-      "impact": 10
-    }
-  ],
+  "events": [],
   "macro_bias": {
     "total_score": 0.0,
     "direction": "NEUTRAL",
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 9.6,
+    "funding_annualized_pct": 11.0,
     "fng": 51
   }
 }
