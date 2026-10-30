@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-10-29T18:03:11.709054+00:00",
+  "timestamp": "2026-10-30T17:44:50.632352+00:00",
   "btc": {
-    "price": 80814.7,
-    "rsi": 46.27270576309419,
-    "ma50": 82060.3,
-    "ma200": 73195.686,
+    "price": 77222.4,
+    "rsi": 35.98901180775965,
+    "ma50": 81985.788,
+    "ma200": 73189.052,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
-    "long_score": 3,
+    "long_score": 2,
     "short_score": 2,
     "breakout_20d": false,
     "breakout_55d": false,
-    "breakdown_20d": false,
+    "breakdown_20d": true,
     "breakdown_55d": false,
     "asset": "BTC",
     "action": "WAIT (BULL regime, no entry)",
@@ -24,13 +24,13 @@
     "stop_dist_pct": 0,
     "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "BULL regime but long_score=3"
+    "reason": "BULL regime but long_score=2"
   },
   "eth": {
-    "price": 2338.61,
-    "rsi": 40.174752631006506,
-    "ma50": 2530.6278,
-    "ma200": 2159.9903,
+    "price": 2242.66,
+    "rsi": 34.8144541004868,
+    "ma50": 2522.0572,
+    "ma200": 2158.8201,
     "regime": "NEUTRAL",
     "bull_score": 2,
     "bear_score": 2,
@@ -55,16 +55,22 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -11
+    "sentiment": -82
   },
-  "events": [],
+  "events": [
+    {
+      "date": "2026-11-06",
+      "name": "US NFP",
+      "impact": 7
+    }
+  ],
   "macro_bias": {
-    "total_score": 0.0,
+    "total_score": 0.5,
     "direction": "NEUTRAL",
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
     "funding_annualized_pct": 11.0,
-    "fng": 51
+    "fng": 30
   }
 }
