@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-11-03T19:04:40.751913+00:00",
+  "timestamp": "2026-11-04T19:23:53.300627+00:00",
   "btc": {
-    "price": 77638.5,
-    "rsi": 38.07385676321033,
-    "ma50": 82017.23,
-    "ma200": 73232.4155,
+    "price": 80230.7,
+    "rsi": 49.08017277475487,
+    "ma50": 82159.284,
+    "ma200": 73267.6205,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
-    "long_score": 2,
+    "long_score": 3,
     "short_score": 2,
     "breakout_20d": false,
     "breakout_55d": false,
@@ -24,38 +24,38 @@
     "stop_dist_pct": 0,
     "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "BULL regime but long_score=2"
+    "reason": "BULL regime but long_score=3"
   },
   "eth": {
-    "price": 2292.02,
-    "rsi": 40.62691840261901,
-    "ma50": 2505.6548,
-    "ma200": 2157.13395,
-    "regime": "NEUTRAL",
-    "bull_score": 2,
-    "bear_score": 2,
-    "long_score": 2,
-    "short_score": 2,
+    "price": 2422.12,
+    "rsi": 52.82579975128121,
+    "ma50": 2508.9314,
+    "ma200": 2158.2644,
+    "regime": "BULL",
+    "bull_score": 3,
+    "bear_score": 1,
+    "long_score": 4,
+    "short_score": 1,
     "breakout_20d": false,
     "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "ETH",
-    "action": "FLAT or CARRY (NEUTRAL regime)",
-    "side": null,
-    "position_pct": 0.0,
-    "capital_usd": 0.0,
-    "units": 0.0,
-    "stop_price": null,
-    "stop_dist_pct": 0,
-    "max_risk_pct_of_account": 0.0,
+    "action": "STARTER LONG",
+    "side": "LONG",
+    "position_pct": 0.08,
+    "capital_usd": 8000.0,
+    "units": 3.3028916816672997,
+    "stop_price": 2228.3504,
+    "stop_dist_pct": 0.08,
+    "max_risk_pct_of_account": 0.64,
     "urgency": "Wait for clearer signals",
-    "reason": "Regime is transitioning - dont fight it | Consider funding rate carry (market-neutral)"
+    "reason": "Good long confluence; await breakout"
   },
   "risk": {
-    "severity": 3,
-    "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -45
+    "severity": 1,
+    "action": "TRADE_NORMAL",
+    "sentiment": -6
   },
   "events": [
     {
@@ -70,7 +70,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 11.0,
-    "fng": 26
+    "funding_annualized_pct": 8.4,
+    "fng": 34
   }
 }
