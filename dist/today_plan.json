@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-11-04T19:23:53.300627+00:00",
+  "timestamp": "2026-11-05T19:31:06.641681+00:00",
   "btc": {
-    "price": 80230.7,
-    "rsi": 49.08017277475487,
-    "ma50": 82159.284,
-    "ma200": 73267.6205,
+    "price": 76019.0,
+    "rsi": 37.43522127947415,
+    "ma50": 82060.218,
+    "ma200": 73248.2,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
-    "long_score": 3,
+    "long_score": 2,
     "short_score": 2,
     "breakout_20d": false,
     "breakout_55d": false,
-    "breakdown_20d": false,
+    "breakdown_20d": true,
     "breakdown_55d": false,
     "asset": "BTC",
     "action": "WAIT (BULL regime, no entry)",
@@ -24,38 +24,38 @@
     "stop_dist_pct": 0,
     "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "BULL regime but long_score=3"
+    "reason": "BULL regime but long_score=2"
   },
   "eth": {
-    "price": 2422.12,
-    "rsi": 52.82579975128121,
-    "ma50": 2508.9314,
-    "ma200": 2158.2644,
+    "price": 2249.85,
+    "rsi": 40.753941157122284,
+    "ma50": 2501.1319999999996,
+    "ma200": 2157.09675,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
-    "long_score": 4,
+    "long_score": 3,
     "short_score": 1,
     "breakout_20d": false,
     "breakout_55d": false,
     "breakdown_20d": false,
     "breakdown_55d": false,
     "asset": "ETH",
-    "action": "STARTER LONG",
-    "side": "LONG",
-    "position_pct": 0.08,
-    "capital_usd": 8000.0,
-    "units": 3.3028916816672997,
-    "stop_price": 2228.3504,
-    "stop_dist_pct": 0.08,
-    "max_risk_pct_of_account": 0.64,
+    "action": "WAIT (BULL regime, no entry)",
+    "side": null,
+    "position_pct": 0.0,
+    "capital_usd": 0.0,
+    "units": 0.0,
+    "stop_price": null,
+    "stop_dist_pct": 0,
+    "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "Good long confluence; await breakout"
+    "reason": "BULL regime but long_score=3"
   },
   "risk": {
-    "severity": 1,
-    "action": "TRADE_NORMAL",
-    "sentiment": -6
+    "severity": 3,
+    "action": "TRADE_NORMAL_WIDER_STOPS",
+    "sentiment": -36
   },
   "events": [
     {
@@ -65,12 +65,12 @@
     }
   ],
   "macro_bias": {
-    "total_score": 0.5,
+    "total_score": 0.0,
     "direction": "NEUTRAL",
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 8.4,
-    "fng": 34
+    "funding_annualized_pct": 11.0,
+    "fng": 50
   }
 }
