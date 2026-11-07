@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-11-06T18:55:08.389164+00:00",
+  "timestamp": "2026-11-07T17:27:39.495348+00:00",
   "btc": {
-    "price": 75808.1,
-    "rsi": 36.95335381436065,
-    "ma50": 81958.658,
-    "ma200": 73247.2565,
+    "price": 75782.7,
+    "rsi": 36.92904738606787,
+    "ma50": 81840.496,
+    "ma200": 73229.6,
     "regime": "BULL",
     "bull_score": 3,
     "bear_score": 1,
@@ -27,10 +27,10 @@
     "reason": "BULL regime but long_score=2"
   },
   "eth": {
-    "price": 2232.23,
-    "rsi": 39.800122534296975,
-    "ma50": 2493.7128,
-    "ma200": 2156.6112,
+    "price": 2233.95,
+    "rsi": 40.03888047856828,
+    "ma50": 2485.6704,
+    "ma200": 2155.7873999999997,
     "regime": "NEUTRAL",
     "bull_score": 2,
     "bear_score": 2,
@@ -55,14 +55,9 @@
   "risk": {
     "severity": 3,
     "action": "TRADE_NORMAL_WIDER_STOPS",
-    "sentiment": -34
+    "sentiment": -16
   },
   "events": [
-    {
-      "date": "2026-11-06",
-      "name": "US NFP",
-      "impact": 7
-    },
     {
       "date": "2026-11-13",
       "name": "US CPI Release",
@@ -75,7 +70,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 8.5,
-    "fng": 28
+    "funding_annualized_pct": 7.4,
+    "fng": 25
   }
 }
