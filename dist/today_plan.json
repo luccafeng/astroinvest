@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-07T17:27:39.495348+00:00",
+  "timestamp": "2026-11-08T17:38:15.695973+00:00",
   "btc": {
-    "price": 75782.7,
-    "rsi": 36.92904738606787,
-    "ma50": 81840.496,
-    "ma200": 73229.6,
-    "regime": "BULL",
+    "price": 75711.6,
+    "rsi": 37.19175620038489,
+    "ma50": 81742.22,
+    "ma200": 73217.73300000001,
+    "regime": "NEUTRAL",
     "bull_score": 3,
     "bear_score": 1,
     "long_score": 2,
@@ -15,7 +15,7 @@
     "breakdown_20d": true,
     "breakdown_55d": true,
     "asset": "BTC",
-    "action": "WAIT (BULL regime, no entry)",
+    "action": "FLAT or CARRY (NEUTRAL regime)",
     "side": null,
     "position_pct": 0.0,
     "capital_usd": 0.0,
@@ -24,13 +24,13 @@
     "stop_dist_pct": 0,
     "max_risk_pct_of_account": 0.0,
     "urgency": "Wait for clearer signals",
-    "reason": "BULL regime but long_score=2"
+    "reason": "Regime is transitioning - dont fight it | Consider funding rate carry (market-neutral)"
   },
   "eth": {
-    "price": 2233.95,
-    "rsi": 40.03888047856828,
-    "ma50": 2485.6704,
-    "ma200": 2155.7873999999997,
+    "price": 2226.87,
+    "rsi": 39.67313378145386,
+    "ma50": 2478.111,
+    "ma200": 2155.2952999999998,
     "regime": "NEUTRAL",
     "bull_score": 2,
     "bear_score": 2,
@@ -38,8 +38,8 @@
     "short_score": 2,
     "breakout_20d": false,
     "breakout_55d": false,
-    "breakdown_20d": false,
-    "breakdown_55d": false,
+    "breakdown_20d": true,
+    "breakdown_55d": true,
     "asset": "ETH",
     "action": "FLAT or CARRY (NEUTRAL regime)",
     "side": null,
@@ -70,7 +70,7 @@
     "confidence": "WEAK",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 7.4,
-    "fng": 25
+    "funding_annualized_pct": 2.8,
+    "fng": 28
   }
 }
