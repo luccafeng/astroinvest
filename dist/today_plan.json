@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-11-12T19:33:38.039055+00:00",
+  "timestamp": "2026-11-13T19:14:25.409864+00:00",
   "btc": {
-    "price": 71505.7,
-    "rsi": 29.58115953947693,
-    "ma50": 80731.73599999999,
-    "ma200": 73117.90950000001,
+    "price": 69020.1,
+    "rsi": 25.85701043567724,
+    "ma50": 80383.97,
+    "ma200": 73069.632,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
@@ -12,8 +12,8 @@
     "short_score": 3,
     "breakout_20d": false,
     "breakout_55d": false,
-    "breakdown_20d": true,
-    "breakdown_55d": true,
+    "breakdown_20d": false,
+    "breakdown_55d": false,
     "asset": "BTC",
     "action": "WAIT (BEAR regime, no entry)",
     "side": null,
@@ -27,19 +27,19 @@
     "reason": "BEAR regime but short_score=3"
   },
   "eth": {
-    "price": 2010.16,
-    "rsi": 31.287909129849425,
-    "ma50": 2422.115,
-    "ma200": 2149.2180000000003,
+    "price": 1948.9,
+    "rsi": 29.615339489785512,
+    "ma50": 2405.8512,
+    "ma200": 2147.1860500000003,
     "regime": "BEAR",
     "bull_score": 1,
     "bear_score": 3,
-    "long_score": 1,
+    "long_score": 2,
     "short_score": 3,
     "breakout_20d": false,
     "breakout_55d": false,
-    "breakdown_20d": true,
-    "breakdown_55d": true,
+    "breakdown_20d": false,
+    "breakdown_55d": false,
     "asset": "ETH",
     "action": "WAIT (BEAR regime, no entry)",
     "side": null,
@@ -53,9 +53,9 @@
     "reason": "BEAR regime but short_score=3"
   },
   "risk": {
-    "severity": 10,
-    "action": "EXIT_ALL",
-    "sentiment": -25
+    "severity": 3,
+    "action": "TRADE_NORMAL_WIDER_STOPS",
+    "sentiment": -22
   },
   "events": [
     {
@@ -65,12 +65,12 @@
     }
   ],
   "macro_bias": {
-    "total_score": 0.5,
+    "total_score": 1.0,
     "direction": "NEUTRAL",
-    "confidence": "WEAK",
+    "confidence": "MODERATE",
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
-    "funding_annualized_pct": 9.3,
-    "fng": 28
+    "funding_annualized_pct": 9.8,
+    "fng": 20
   }
 }
