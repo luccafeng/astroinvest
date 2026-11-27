@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-11-26T20:57:20.382074+00:00",
+  "timestamp": "2026-11-27T20:42:26.960711+00:00",
   "btc": {
-    "price": 60767.3,
-    "rsi": 32.57586699032204,
-    "ma50": 74476.238,
-    "ma200": 71890.754,
+    "price": 59739.8,
+    "rsi": 30.631070052999945,
+    "ma50": 74000.706,
+    "ma200": 71784.57800000001,
     "regime": "NEUTRAL",
     "bull_score": 2,
     "bear_score": 2,
@@ -27,10 +27,10 @@
     "reason": "Regime is transitioning - dont fight it | Consider funding rate carry (market-neutral)"
   },
   "eth": {
-    "price": 1704.65,
-    "rsi": 33.42238280774147,
-    "ma50": 2162.4416,
-    "ma200": 2108.45185,
+    "price": 1665.55,
+    "rsi": 30.928440646681167,
+    "ma50": 2145.3294,
+    "ma200": 2105.30775,
     "regime": "NEUTRAL",
     "bull_score": 2,
     "bear_score": 2,
@@ -53,11 +53,17 @@
     "reason": "Regime is transitioning - dont fight it | Consider funding rate carry (market-neutral)"
   },
   "risk": {
-    "severity": 0,
-    "action": "TRADE_NORMAL",
-    "sentiment": -5
+    "severity": 3,
+    "action": "TRADE_NORMAL_WIDER_STOPS",
+    "sentiment": -24
   },
-  "events": [],
+  "events": [
+    {
+      "date": "2026-12-04",
+      "name": "US NFP",
+      "impact": 7
+    }
+  ],
   "macro_bias": {
     "total_score": 1.0,
     "direction": "NEUTRAL",
@@ -65,6 +71,6 @@
     "etf_sum_7d_musd": null,
     "etf_score": 0.0,
     "funding_annualized_pct": 1.5,
-    "fng": 11
+    "fng": 12
   }
 }
